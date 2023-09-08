@@ -1,12 +1,18 @@
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react'
 import '../App.css';
 import { Link, useNavigate } from 'react-router-dom';
 import axios from 'axios';
+import AlertContext from '../context/alertState/AlertContext';
 
 export default function Signup() {
 
-  const [inputs , setInputs] = useState([]);
-  const [alert , setAlert] = useState("Alert");
+  const AObj = useContext(AlertContext);
+
+  const [inputs , setInputs] = useState({
+    name : "",
+    email : "",
+    password : ""
+  });
 
   const navigate = useNavigate();  
 
@@ -16,16 +22,22 @@ export default function Signup() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    await axios.post("http://localhost:3001/signup" , inputs).then((response) => {
-      const resMsg = response.data['message'];
-      setAlert(resMsg);
-      if(resMsg === "Successfully Sign up"){
-        navigate('/signin');
-      }
-    
-    }).catch((err) => {console.log(err)});
+    if(inputs.name !== "" && inputs.email !== "" && inputs.password !== ""){
 
-    
+      await axios.post("http://localhost:3001/signup" , inputs).then((response) => {
+          const resMsg = response.data['message'];
+          if(resMsg === "Successfully Sign up"){
+            AObj.showAlert(resMsg , "Success" , "green");
+              navigate('/signin');
+          }else{
+            AObj.showAlert(resMsg , "Danger" , "red");
+          }
+          
+          }).catch((err) => {console.log(err)});
+         
+    }else{
+      AObj.showAlert("Fields are Not submitted as empty" , "Danger" , "red");
+    }
   };
 
   return (
@@ -34,8 +46,7 @@ export default function Signup() {
         <div className='w-full flex items-center justify-center'>
           <div className="w-full max-w-sm p-4 bg-white border border-gray-200 rounded-lg shadow sm:p-6 md:p-8 dark:bg-gray-800 dark:border-gray-700">
             <form className="space-y-6" action="">
-              <h5 className="text-xl font-medium text-gray-900 dark:text-white">Sign in</h5>
-              <p>{alert}</p>
+              <h5 className="text-xl font-medium text-gray-900 dark:text-white">Sign Up</h5>
               <div>
                 <label htmlFor="text" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Your Full Name</label>
                 <input type="text" onChange={(e) => handleChange(e)} name="name" id="text" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" placeholder="Enter you name" required />

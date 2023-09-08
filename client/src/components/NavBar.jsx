@@ -1,5 +1,5 @@
-import { Fragment, useState } from 'react'
-import { Link } from 'react-router-dom';
+import { Fragment, useContext, useState } from 'react'
+import { Link, Navigate, useNavigate } from 'react-router-dom';
 import { Dialog, Disclosure, Popover, Transition } from '@headlessui/react'
 import {
   ArrowPathIcon,
@@ -11,6 +11,10 @@ import {
   XMarkIcon,
 } from '@heroicons/react/24/outline'
 import { ChevronDownIcon, PhoneIcon, PlayCircleIcon } from '@heroicons/react/20/solid'
+import Alert from './Alert';
+import { useCookies } from 'react-cookie';
+import LogContext from '../context/logState/LogContext';
+import AlertContext from '../context/alertState/AlertContext';
 
 const products = [
   { name: 'Cyber Security', description: 'Discover the significance of digital privacy in the online world.', href: '/cyberSecurity', 
@@ -39,7 +43,18 @@ function classNames(...classes) {
 }
 
 export default function NavBar() {
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+
+  const [cookie , setCookie] = useCookies(["access_token"]);
+
+  const navigate = useNavigate();
+
+  const LObj = useContext(LogContext);
+  const AObj = useContext(AlertContext);
+  const handleLogout = () => {
+    AObj.showAlert("Log Out Successfull" , "Success" , "green");
+    LObj.fillData(null);
+  };
 
   return (
     <>
@@ -121,9 +136,15 @@ export default function NavBar() {
             </Link>
           </Popover.Group>
           <div className="hidden lg:flex lg:flex-1 lg:justify-end">
-            <Link to="/" className="text-sm font-semibold leading-6 text-gray-900">
-              Log in <span aria-hidden="true">&rarr;</span>
-            </Link>
+            
+            {!cookie.access_token ? 
+              <button onClick = {(e) => navigate("/signin")} className="text-sm font-semibold leading-6 text-gray-900">
+                Log in <span aria-hidden="true">&rarr;</span>
+              </button> :
+              <button onClick = {handleLogout} className="text-sm font-semibold leading-6 text-gray-900">
+                Log out <span aria-hidden="true">&rarr;</span>
+              </button>
+            }
           </div>
         </nav>
         <Dialog as="div" className="lg:hidden" open={mobileMenuOpen} onClose={setMobileMenuOpen}>
@@ -132,7 +153,7 @@ export default function NavBar() {
             <div className="flex items-center justify-between">
               <Link to="/" className="-m-1.5 p-1.5">
                 <span className="sr-only">Your Company</span>
-                <span class="self-center text-2xl font-semibold whitespace-nowrap text-[#172554]">Cyber Shield</span>
+                <span className="self-center text-2xl font-semibold whitespace-nowrap text-[#172554]">Cyber Shield</span>
               </Link>
               <button
                 type="button"
@@ -190,40 +211,30 @@ export default function NavBar() {
                     Reporting
                   </Link>
                 </div>
-                <button class="text-white bg-gradient-to-r from-blue-400 via-blue-600 to-blue-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 shadow-lg shadow-blue-500/50 dark:shadow-lg dark:shadow-blue-800/80 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 ">
-                  <span  
-                  class="relative px-5 py-2.5 transition-all ease-in duration-75"
-                  > 
-                      Log in
-                  </span>
-                </button>
+                
+                {!cookie.access_token ? 
+                  <button onClick = {(e) => navigate("/signin")} className = "text-white bg-gradient-to-r from-blue-400 via-blue-600 to-blue-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 shadow-lg shadow-blue-500/50 dark:shadow-lg dark:shadow-blue-800/80 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 ">
+                     <span  
+                    className="relative px-5 py-2.5 transition-all ease-in duration-75"
+                    > 
+                        Log in
+                      </span>
+                  </button> :
+                  <button onClick = {handleLogout} className="text-white bg-gradient-to-r from-blue-400 via-blue-600 to-blue-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 shadow-lg shadow-blue-500/50 dark:shadow-lg dark:shadow-blue-800/80 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 ">
+                    <span  
+                    className="relative px-5 py-2.5 transition-all ease-in duration-75"
+                    > 
+                        Log out
+                    </span>
+                  </button>
+                }
+
               </div>
             </div>
           </Dialog.Panel>
         </Dialog>
       </header>
-{/* 
-        Alert Red 
-      <div className=' flex item-center p-4 mb-4 m-2 text-sm text-red-800 border border-red-300 rounded-lg bg-red-50 dark:text-red-400 dark:border-red-800' role="alert">
-        <svg class="flex-shrink-0 inline w-4 h-4 mr-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
-          <path d='M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5ZM9.5 4a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3ZM12 15H8a1 1 0 0 1 0-2h1v-3H8a1 1 0 0 1 0-2h2a1 1 0 0 1 1 1v4h1a1 1 0 0 1 0 2Z'/>
-        </svg>
-        <span class='sr-only'>info</span>
-        <div>
-        <span class="font-medium">Danger alert!</span> 
-        </div>
-      </div>    
-
-          Green Alert 
-      <div class=" flex items-center p-4 mb-4 m-2 text-sm text-green-800 border border-green-300 rounded-lg bg-green-50 dark:bg-gray-800 dark:text-green-400 dark:border-green-800" role="alert">
-        <svg class="flex-shrink-0 inline w-4 h-4 mr-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
-          <path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5ZM9.5 4a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3ZM12 15H8a1 1 0 0 1 0-2h1v-3H8a1 1 0 0 1 0-2h2a1 1 0 0 1 1 1v4h1a1 1 0 0 1 0 2Z"/>
-        </svg>
-        <span class="sr-only">Info</span>
-        <div>
-          <span class="font-medium">Success alert!</span>
-        </div>
-      </div> */}
+      <Alert/>
     </>
   )
 }

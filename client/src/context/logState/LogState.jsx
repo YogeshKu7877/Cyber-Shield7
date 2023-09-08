@@ -7,13 +7,13 @@ const LogState = (props) => {
     const[cookie , setCookie] = useCookies(["access_token"]);
 
     const fillData = (data) =>{
-        if(detail === null){
+        if(data !== null){
             setDetail({
-                name : data.name,
-                email : data.email
+                name : data.data["name"],
+                email : data.data["email"]
             });
             setCookie("access_token" , data.token);
-            window.localStorage.setItem("userID" , data._id);
+            window.localStorage.setItem("userID" , data.data["_id"]);
         }else{
             setDetail(null);
             setCookie("access_token" , "");
