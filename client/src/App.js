@@ -13,28 +13,39 @@ import AboutUs from "./components/AboutUs";
 import Signin from "./components/Signin";
 import Signup from "./components/Signup";
 
+import AlertState from './context/alertState/AlertState';
+import LogState from './context/logState/LogState';
+
 
 function App() {
   return (
     <>
-      <BrowserRouter>
-        <NavBar/>
+      <LogState>
 
-        <Routes>
+        <AlertState>
+          
+          <BrowserRouter>
+            <NavBar/>
 
-          <Route exact path = '/' element = {<Home /> } />
-          <Route exact path = '/education' element = {<Education /> } />
-          <Route exact path = '/hsd' element = {<HSD /> } />
-          <Route exact path = '/tools' element = {<Tools /> } />
-          <Route exact path = '/toolsDetail' element = {<ToolsDetail /> } />
-          <Route exact path = '/aboutUs' element = {<AboutUs /> } />
+            <Routes>
 
-          <Route exact path = '/signin' element = {<Signin /> } />
-          <Route exact path = '/signup' element = {<Signup /> } />
+              <Route exact path = '/' element = {<Home /> } />
+              <Route exact path = '/education' element = {<Education /> } />
+              <Route exact path = '/hsd' element = {<HSD /> } />
+              <Route exact path = '/tools' element = {<Tools /> } />
+              <Route exact path = '/toolsDetail' element = {<ToolsDetail /> } />
+              <Route exact path = '/aboutUs' element = {<AboutUs /> } />
 
-        </Routes>
-      
-      </BrowserRouter>
+              <Route exact path = '/signin' element = {<Signin /> } />
+              <Route exact path = '/signup' element = {<Signup /> } />
+
+            </Routes>
+          
+          </BrowserRouter>
+
+        </AlertState>
+
+      </LogState>
     </>
   );
 }
