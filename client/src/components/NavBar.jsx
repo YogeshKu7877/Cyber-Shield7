@@ -12,7 +12,6 @@ import {
 } from '@heroicons/react/24/outline'
 import { ChevronDownIcon, PhoneIcon, PlayCircleIcon } from '@heroicons/react/20/solid'
 import Alert from './Alert';
-import { useCookies } from 'react-cookie';
 import LogContext from '../context/logState/LogContext';
 import AlertContext from '../context/alertState/AlertContext';
 
@@ -45,12 +44,11 @@ function classNames(...classes) {
 export default function NavBar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
-  const [cookie , setCookie] = useCookies(["access_token"]);
-
   const navigate = useNavigate();
 
   const LObj = useContext(LogContext);
   const AObj = useContext(AlertContext);
+
   const handleLogout = () => {
     AObj.showAlert("Log Out Successfull" , "Success" , "green");
     LObj.fillData(null);
@@ -128,16 +126,16 @@ export default function NavBar() {
               </Transition>
             </Popover>
 
-            <Link to="/" className="text-sm font-semibold leading-6 text-gray-900">
+            <Link to="/aboutUs" className="text-sm font-semibold leading-6 text-gray-900">
               About Us
             </Link>
-            <Link to="/" className="text-sm font-semibold leading-6 text-gray-900">
+            <Link to="/reporting" className="text-sm font-semibold leading-6 text-gray-900">
               Reporting
             </Link>
           </Popover.Group>
           <div className="hidden lg:flex lg:flex-1 lg:justify-end">
             
-            {!cookie.access_token ? 
+            {!LObj.cookies.access_token ? 
               <button onClick = {(e) => navigate("/signin")} className="text-sm font-semibold leading-6 text-gray-900">
                 Log in <span aria-hidden="true">&rarr;</span>
               </button> :
@@ -212,7 +210,7 @@ export default function NavBar() {
                   </Link>
                 </div>
                 
-                {!cookie.access_token ? 
+                {!LObj.cookies.access_token ? 
                   <button onClick = {(e) => navigate("/signin")} className = "text-white bg-gradient-to-r from-blue-400 via-blue-600 to-blue-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 shadow-lg shadow-blue-500/50 dark:shadow-lg dark:shadow-blue-800/80 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 ">
                      <span  
                     className="relative px-5 py-2.5 transition-all ease-in duration-75"

@@ -2,10 +2,11 @@ const mongoose = require('mongoose');
 
 const DictSchema = new mongoose.Schema({
     word : {
-        type : String
+        type : String,
+        require : true
     }
 });
 
-const DictModel = mongoose.model("dictionary" , DictSchema);
+const DictModel = mongoose.model("dictionaries" , DictSchema);
 
 module.exports = DictModel;

@@ -3,26 +3,24 @@ import LogContext from "./LogContext";
 import {useCookies} from "react-cookie"; 
 
 const LogState = (props) => {
-    const [detail , setDetail] = useState(null);
-    const[cookie , setCookie] = useCookies(["access_token"]);
+    const [cookies, setCookies] = useCookies(["access_token" , "name" , "email"]);
 
     const fillData = (data) =>{
         if(data !== null){
-            setDetail({
-                name : data.data["name"],
-                email : data.data["email"]
-            });
-            setCookie("access_token" , data.token);
+            setCookies("access_token" , data.token);
+            setCookies("name" , data.data["name"]);
+            setCookies("email" , data.data["email"]);
             window.localStorage.setItem("userID" , data.data["_id"]);
         }else{
-            setDetail(null);
-            setCookie("access_token" , "");
+            setCookies("access_token" , "");
+            setCookies("name" , "");
+            setCookies("email" , "");
             window.localStorage.removeItem("userID");
         }
     }
 
     return (
-        <LogContext.Provider value={{detail , fillData}}>
+        <LogContext.Provider value={{cookies , fillData}}>
             {props.children}
         </LogContext.Provider>
     );
