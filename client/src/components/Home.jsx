@@ -1,10 +1,9 @@
 import React from "react";
-<<<<<<< HEAD
-=======
+
 import { Link } from "react-router-dom";
 import { Disclosure } from "@headlessui/react";
 import { ChevronUpIcon } from "@heroicons/react/20/solid";
->>>>>>> nikhil
+
 
 function Home() {
   return (
@@ -21,13 +20,10 @@ function Home() {
             making the online world safer, more inclusive, and respectful.
           </p>
           <div className="flex flex-col space-y-4 sm:flex-row sm:justify-center sm:space-y-0 sm:space-x-4">
-<<<<<<< HEAD
-            <a
-              href="#"
-=======
+
             <Link
               to="/hsd"
->>>>>>> nikhil
+
               className="inline-flex justify-center items-center py-3 px-5 text-base font-medium text-center text-white rounded-lg bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 dark:focus:ring-blue-900"
             >
               Quick scan
@@ -46,15 +42,6 @@ function Home() {
                   d="M1 5h12m0 0L9 1m4 4L9 9"
                 />
               </svg>
-<<<<<<< HEAD
-            </a>
-            <a
-              href="#"
-              className="inline-flex justify-center hover:text-gray-900 items-center py-3 px-5 text-base font-medium text-center text-white rounded-lg border border-white hover:bg-gray-100 focus:ring-4 focus:ring-gray-400"
-            >
-              Learn more
-            </a>
-=======
             </Link>
             <Link
               to="/"
@@ -62,7 +49,7 @@ function Home() {
             >
               Learn more
             </Link>
->>>>>>> nikhil
+
           </div>
         </div>
 
@@ -118,11 +105,8 @@ function Home() {
                         media platforms can spread rapidly, influencing public
                         opinion and inciting real-world actions.
                       </p>
-<<<<<<< HEAD
-                      <ul role="list" className="mt-8 space-y-8 text-gray-600">
-=======
                       <ul className="mt-8 space-y-8 text-gray-600">
->>>>>>> nikhil
+
                         <li className="flex gap-x-3">
                           <span>
                             <strong className="font-semibold text-gray-900">
@@ -216,16 +200,6 @@ function Home() {
                 Cyber Education
               </span>
             </h2>
-
-<<<<<<< HEAD
-            <p className="mt-4 text-gray-900">Cyber Security.</p>
-          </div>
-
-          <div className="mt-8 grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
-            <a
-              className="block rounded-xl border border-gray-500 p-8 shadow-xl transition hover:border-gray-100 hover:shadow-purple-500/10"
-              href="#"
-=======
             <p className="mt-4 text-gray-900">Cyber Security</p>
           </div>
 
@@ -233,7 +207,7 @@ function Home() {
             <Link
               className="block rounded-xl border border-gray-500 p-8 shadow-xl transition hover:border-gray-100 hover:shadow-purple-500/10"
               to="/cyberSecurity"
->>>>>>> nikhil
+
             >
               <h2 className="mt-4 text-xl font-bold text-black">
                 Digital campaigns
@@ -244,17 +218,12 @@ function Home() {
                 quo possimus adipisci distinctio alias voluptatum blanditiis
                 laudantium.
               </p>
-<<<<<<< HEAD
-            </a>
-            <a
-              className="block rounded-xl border border-gray-500 p-8 shadow-xl transition hover:border-gray-100 hover:shadow-purple-500/10"
-              href="#"
-=======
+
             </Link>
             <Link
               className="block rounded-xl border border-gray-500 p-8 shadow-xl transition hover:border-gray-100 hover:shadow-purple-500/10"
               to="/cyberSecurity"
->>>>>>> nikhil
+
             >
               <h2 className="mt-4 text-xl font-bold text-black">
                 Digital campaigns
@@ -265,17 +234,11 @@ function Home() {
                 quo possimus adipisci distinctio alias voluptatum blanditiis
                 laudantium.
               </p>
-<<<<<<< HEAD
-            </a>
-            <a
-              className="block rounded-xl border border-gray-500 p-8 shadow-xl transition hover:border-gray-100 hover:shadow-purple-500/10"
-              href="#"
-=======
             </Link>
             <Link
               className="block rounded-xl border border-gray-500 p-8 shadow-xl transition hover:border-gray-100 hover:shadow-purple-500/10"
               to="/cyberSecurity"
->>>>>>> nikhil
+
             >
               <h2 className="mt-4 text-xl font-bold text-black">
                 Digital campaigns
@@ -286,56 +249,9 @@ function Home() {
                 quo possimus adipisci distinctio alias voluptatum blanditiis
                 laudantium.
               </p>
-<<<<<<< HEAD
-            </a>
-            <a
-              className="block rounded-xl border border-gray-500 p-8 shadow-xl transition hover:border-gray-100 hover:shadow-purple-500/10"
-              href="#"
-            >
-              <h2 className="mt-4 text-xl font-bold text-black">
-                Digital campaigns
-              </h2>
-
-              <p className="mt-1 text-sm text-gray-700">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex ut
-                quo possimus adipisci distinctio alias voluptatum blanditiis
-                laudantium.
-              </p>
-            </a>
-            <a
-              className="block rounded-xl border border-gray-500 p-8 shadow-xl transition hover:border-gray-100 hover:shadow-purple-500/10"
-              href="#"
-            >
-              <h2 className="mt-4 text-xl font-bold text-black">
-                Digital campaigns
-              </h2>
-
-              <p className="mt-1 text-sm text-gray-700">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex ut
-                quo possimus adipisci distinctio alias voluptatum blanditiis
-                laudantium.
-              </p>
-            </a>
-            <a
-              className="block rounded-xl border border-gray-500 p-8 shadow-xl transition hover:border-gray-100 hover:shadow-purple-500/10"
-              href="#"
-            >
-              <h2 className="mt-4 text-xl font-bold text-black">
-                Digital campaigns
-              </h2>
-
-              <p className="mt-1 text-sm text-gray-700">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex ut
-                quo possimus adipisci distinctio alias voluptatum blanditiis
-                laudantium.
-              </p>
-            </a>
-          </div>
-=======
             </Link>
           </div>
 
->>>>>>> nikhil
         </div>
         <section className="bg-gray-200 text-black">
           <div className="mx-auto max-w-screen-xl px-4 py-8 sm:py-12 sm:px-6 lg:py-10 lg:px-8">
@@ -343,15 +259,11 @@ function Home() {
               <p className="mt-4 text-gray-900">Digital Privacy content.</p>
             </div>
             <div className="mt-8 grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
-<<<<<<< HEAD
-              <a
-                className="block rounded-xl border border-gray-500 p-8 shadow-xl transition hover:border-gray-100 hover:shadow-purple-500/10"
-                href="#"
-=======
+
               <Link
                 className="block rounded-xl border border-gray-500 p-8 shadow-xl transition hover:border-gray-100 hover:shadow-purple-500/10"
                 to="/digitalPrivacy"
->>>>>>> nikhil
+
               >
                 <h2 className="mt-4 text-xl font-bold text-black">
                   Digital campaigns
@@ -362,18 +274,12 @@ function Home() {
                   quo possimus adipisci distinctio alias voluptatum blanditiis
                   laudantium.
                 </p>
-<<<<<<< HEAD
-              </a>
-              <a
-                className="block rounded-xl border border-gray-500 p-8 shadow-xl transition hover:border-gray-100 hover:shadow-purple-500/10"
-                href="#"
-=======
               </Link>
 
               <Link
                 className="block rounded-xl border border-gray-500 p-8 shadow-xl transition hover:border-gray-100 hover:shadow-purple-500/10"
                 to="/digitalPrivacy"
->>>>>>> nikhil
+
               >
                 <h2 className="mt-4 text-xl font-bold text-black">
                   Digital campaigns
@@ -384,18 +290,13 @@ function Home() {
                   quo possimus adipisci distinctio alias voluptatum blanditiis
                   laudantium.
                 </p>
-<<<<<<< HEAD
-              </a>
-              <a
-                className="block rounded-xl border border-gray-500 p-8 shadow-xl transition hover:border-gray-100 hover:shadow-purple-500/10"
-                href="#"
-=======
+
               </Link>
               
               <Link
                 className="block rounded-xl border border-gray-500 p-8 shadow-xl transition hover:border-gray-100 hover:shadow-purple-500/10"
                 to="/digitalPrivacy"
->>>>>>> nikhil
+
               >
                 <h2 className="mt-4 text-xl font-bold text-black">
                   Digital campaigns
@@ -406,61 +307,6 @@ function Home() {
                   quo possimus adipisci distinctio alias voluptatum blanditiis
                   laudantium.
                 </p>
-<<<<<<< HEAD
-              </a>
-              <a
-                className="block rounded-xl border border-gray-500 p-8 shadow-xl transition hover:border-gray-100 hover:shadow-purple-500/10"
-                href="#"
-              >
-                <h2 className="mt-4 text-xl font-bold text-black">
-                  Digital campaigns
-                </h2>
-
-                <p className="mt-1 text-sm text-gray-700">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex ut
-                  quo possimus adipisci distinctio alias voluptatum blanditiis
-                  laudantium.
-                </p>
-              </a>
-              <a
-                className="block rounded-xl border border-gray-500 p-8 shadow-xl transition hover:border-gray-100 hover:shadow-purple-500/10"
-                href="#"
-              >
-                <h2 className="mt-4 text-xl font-bold text-black">
-                  Digital campaigns
-                </h2>
-
-                <p className="mt-1 text-sm text-gray-700">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex ut
-                  quo possimus adipisci distinctio alias voluptatum blanditiis
-                  laudantium.
-                </p>
-              </a>
-              <a
-                className="block rounded-xl border border-gray-500 p-8 shadow-xl transition hover:border-gray-100 hover:shadow-purple-500/10"
-                href="#"
-              >
-                <h2 className="mt-4 text-xl font-bold text-black">
-                  Digital campaigns
-                </h2>
-
-                <p className="mt-1 text-sm text-gray-700">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex ut
-                  quo possimus adipisci distinctio alias voluptatum blanditiis
-                  laudantium.
-                </p>
-              </a>
-            </div>
-
-            <div className="mt-12 text-center">
-              <a
-                href="#"
-                className="inline-block rounded bg-purple-600 px-12 py-3 text-sm font-medium text-white transition hover:bg-purple-500 focus:outline-none focus:ring focus:ring-purple-400"
-              >
-                Learn more
-              </a>
-            </div>
-=======
               </Link>
             </div>
 
@@ -578,7 +424,6 @@ function Home() {
               </Link>
             </div>
 
->>>>>>> nikhil
           </div>
         </section>
       </section>
@@ -628,14 +473,6 @@ function Home() {
                 Thank you for taking a stand and joining us in promoting digital
                 respect and safety.
               </p>
-<<<<<<< HEAD
-              <button
-                type="button"
-                className="text-red-700 mt-7 hover:text-white border border-red-700 hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-red-300 font-medium rounded-lg text-sm px-9 py-2.5 text-center mr-2 mb-2 dark:border-red-500 dark:text-red-500 dark:hover:text-white dark:hover:bg-red-600 dark:focus:ring-red-700"
-              >
-                Sand report!
-              </button>
-=======
               <Link 
                 to = "/reporting"
                 type="button"
@@ -643,13 +480,12 @@ function Home() {
               >
                 Send report!
               </Link>
->>>>>>> nikhil
+
             </div>
           </div>
         </div>
       </section>
-<<<<<<< HEAD
-=======
+
       <div className="w-full px-4 pt-16">
         <div className="flex flex-col items-center justify-between w-full font-medium text-left rounded-2xl bg-white p-2">
           <Disclosure>
@@ -804,7 +640,7 @@ function Home() {
           </Disclosure>
         </div>
       </div>
->>>>>>> nikhil
+
     </>
   );
 }

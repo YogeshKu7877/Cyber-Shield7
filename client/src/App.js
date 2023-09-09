@@ -140,15 +140,8 @@ function App() {
     <>
       <ToolState>
 
-<<<<<<< HEAD
-        <AlertState>
-          
-          <BrowserRouter>
-            <NavBar/>
-            
-=======
         <LogState>
->>>>>>> nikhil
+
 
           <AlertState>
             

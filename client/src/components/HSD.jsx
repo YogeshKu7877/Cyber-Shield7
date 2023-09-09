@@ -1,15 +1,4 @@
-<<<<<<< HEAD
-import React from "react";
-import HateSDweb from "../asserts/img/HateSDweb.jpg";
-function Hsd() {
-  return (
-    <>
-      <div class=" relative bg-white py-24 sm:py-32 z-[-1]">
-        <div class="mx-auto max-w-7xl px-6 lg:px-8">
-          <div class="mx-auto mt-[-40px] max-w-2xl lg:mx-0">
-            <h1 class="mb-4 text-4xl font-extrabold leading-none tracking-tight text-gray-900 md:text-4xl lg:text-5xl dark:text-white">
-              <mark class="px-2 text-white bg-[#dc2626] rounded dark:bg-blue-500">
-=======
+
 import React, { useState } from "react";
 import { useEffect } from "react";
 import axios from 'axios';
@@ -51,29 +40,17 @@ function HSD() {
           <div className="mx-auto mt-[-40px] max-w-2xl lg:mx-0">
             <h1 className="mb-4 text-4xl font-extrabold leading-none tracking-tight text-gray-900 md:text-4xl lg:text-5xl dark:text-white">
               <mark className="px-2 text-white bg-[#dc2626] rounded dark:bg-blue-500">
->>>>>>> nikhil
+
                 Hate
               </mark>
               Speech Detection
             </h1>
-<<<<<<< HEAD
-            <p class="mt-2 text-lg leading-8 text-gray-600">
-=======
             <p className="mt-2 text-lg leading-8 text-gray-600">
->>>>>>> nikhil
+
               Automated identification of hate speech in digital communication
               using technology and algorithms.
             </p>
           </div>
-<<<<<<< HEAD
-          <div class="mx-auto mt-10 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 border-t border-gray-200 pt-10 sm:mt-16 sm:pt-16 lg:mx-0 lg:max-w-none lg:grid-cols-3">
-            <article class="flex max-w-xl m-auto flex-col items-start justify-between">
-              <div class="w-full p-4 text-center bg-[#ebf4f5] border border-gray-200 rounded-lg sm:p-8 dark:bg-gray-800 shadow-lg dark:border-gray-900">
-                <h5 class="mb-5 text-3xl font-bold text-gray-900 dark:text-white">
-                  What is Hate speech?
-                </h5>
-                <p class="mb-5 text-base text-gray-500 sm:text-lg dark:text-gray-400">
-=======
           <div className="mx-auto mt-10 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 border-t border-gray-200 pt-10 sm:mt-16 sm:pt-16 lg:mx-0 lg:max-w-none lg:grid-cols-3">
             <article className="flex max-w-xl m-auto flex-col items-start justify-between">
               <div className="w-full p-4 text-center bg-[#ebf4f5] border border-gray-200 rounded-lg sm:p-8 dark:bg-gray-800 shadow-lg dark:border-gray-900">
@@ -81,7 +58,7 @@ function HSD() {
                   What is Hate speech?
                 </h5>
                 <p className="mb-5 text-base text-gray-500 sm:text-lg dark:text-gray-400">
->>>>>>> nikhil
+
                   Hate speech is harmful, discriminatory language or expressions
                   that target individuals or groups based on their
                   characteristics, such as race, religion, gender, or ethnicity,
@@ -90,21 +67,13 @@ function HSD() {
                 </p>
               </div>
             </article>
-<<<<<<< HEAD
-            <article class="flex max-w-xl m-auto flex-col items-start justify-between">
-              <div class="w-full p-4 text-center bg-[#ebf4f5] border border-gray-200 rounded-lg sm:p-8 dark:bg-gray-800 shadow-lg dark:border-gray-900">
-                <h5 class="mb-5 text-3xl font-bold text-gray-900 dark:text-white">
-                  What is Hate Speech Detection?
-                </h5>
-                <p class="mb-5 text-base text-gray-500 sm:text-lg dark:text-gray-400">
-=======
             <article className="flex max-w-xl m-auto flex-col items-start justify-between">
               <div className="w-full p-4 text-center bg-[#ebf4f5] border border-gray-200 rounded-lg sm:p-8 dark:bg-gray-800 shadow-lg dark:border-gray-900">
                 <h5 className="mb-5 text-3xl font-bold text-gray-900 dark:text-white">
                   What is Hate Speech Detection?
                 </h5>
                 <p className="mb-5 text-base text-gray-500 sm:text-lg dark:text-gray-400">
->>>>>>> nikhil
+
                   Hate Speech Detection is the use of technology and algorithms
                   to automatically identify and flag instances of hate speech or
                   offensive content in digital communication, with the goal of
@@ -113,21 +82,13 @@ function HSD() {
                 </p>
               </div>
             </article>
-<<<<<<< HEAD
-            <article class="flex max-w-xl m-auto flex-col items-start justify-between">
-              <div class="w-full p-4 text-center bg-[#ebf4f5] border border-gray-200 rounded-lg sm:p-8 dark:bg-gray-800 shadow-lg dark:border-gray-900">
-                <h5 class="mb-5 text-3xl font-bold text-gray-900 dark:text-white">
-                  What does it do?
-                </h5>
-                <p class="mb-5 text-base text-gray-500 sm:text-lg dark:text-gray-400">
-=======
             <article className="flex max-w-xl m-auto flex-col items-start justify-between">
               <div className="w-full p-4 text-center bg-[#ebf4f5] border border-gray-200 rounded-lg sm:p-8 dark:bg-gray-800 shadow-lg dark:border-gray-900">
                 <h5 className="mb-5 text-3xl font-bold text-gray-900 dark:text-white">
                   What does it do?
                 </h5>
                 <p className="mb-5 text-base text-gray-500 sm:text-lg dark:text-gray-400">
->>>>>>> nikhil
+
                   Hate Speech Detection helps create a more inclusive and
                   respectful digital environment by identifying and addressing
                   harmful content, such as harassment and incitement to
@@ -178,11 +139,8 @@ function HSD() {
               <div className="lg:max-w-lg">
                 <h1 className="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
                   Why we need{" "}
-<<<<<<< HEAD
-                  <span class="underline underline-offset-3 decoration-8 decoration-blue-400 dark:decoration-blue-600">
-=======
                   <span className="underline underline-offset-3 decoration-8 decoration-blue-400 dark:decoration-blue-600">
->>>>>>> nikhil
+
                     Hate Speech Detector
                   </span>
                   ?
@@ -214,11 +172,8 @@ function HSD() {
                   rapidly, influencing public opinion and inciting real-world
                   actions.
                 </p>
-<<<<<<< HEAD
-                <ul role="list" className="mt-8 space-y-8 text-gray-600">
-=======
                 <ul className="mt-8 space-y-8 text-gray-600">
->>>>>>> nikhil
+
                   <li className="flex gap-x-3">
                     <span>
                       <strong className="font-semibold text-gray-900">
@@ -301,37 +256,17 @@ function HSD() {
         </div>
       </div>
 
-<<<<<<< HEAD
-      <div class="w-full h-screen mb-9 p-4 text-center bg-[#94a3b8] border border-gray-200 rounded-lg shadow sm:p-8 dark:bg-gray-800 dark:border-gray-700">
-        <form>
-          <div class="w-full mb-4 border border-gray-200 rounded-lg bg-gray-50 dark:bg-gray-700 dark:border-gray-600">
-            <div class="px-4 py-2 bg-white rounded-t-lg dark:bg-gray-800">
-              <label for="comment" class="sr-only">
-=======
+
       <div className="w-full h-screen mb-9 p-4 text-center bg-[#94a3b8] border border-gray-200 rounded-lg shadow sm:p-8 dark:bg-gray-800 dark:border-gray-700">
         <form>
           <div className="w-full mb-4 border border-gray-200 rounded-lg bg-gray-50 dark:bg-gray-700 dark:border-gray-600">
             <div className="px-4 py-2 bg-white rounded-t-lg dark:bg-gray-800">
               <label htmlFor="comment" className="sr-only">
->>>>>>> nikhil
+
                 Your comment
               </label>
               <textarea
                 id="comment"
-<<<<<<< HEAD
-                rows="4"
-                class="w-full px-0 text-sm text-gray-900 bg-white border-0 dark:bg-gray-800 focus:ring-0 dark:text-white dark:placeholder-gray-400"
-                placeholder="Write a comment..."
-                required
-              ></textarea>
-            </div>
-            <div class="flex items-center justify-between px-3 py-2 border-t dark:border-gray-600">
-              <button
-                type="submit"
-                class="inline-flex items-center py-2.5 px-4 text-xs font-medium text-center text-white bg-blue-700 rounded-lg focus:ring-4 focus:ring-blue-200 dark:focus:ring-blue-900 hover:bg-blue-800"
-              >
-                Sand content
-=======
                 name = "string"
                 onChange = {(e) => handleChange(e)}
                 rows="4"
@@ -348,38 +283,11 @@ function HSD() {
                 className="inline-flex items-center py-2.5 px-4 text-xs font-medium text-center text-white bg-blue-700 rounded-lg focus:ring-4 focus:ring-blue-200 dark:focus:ring-blue-900 hover:bg-blue-800"
               >
                 Check content
->>>>>>> nikhil
+
               </button>
             </div>
           </div>
         </form>
-<<<<<<< HEAD
-        <div class="w-full mb-4 border border-gray-200 rounded-lg bg-gray-50 dark:bg-gray-700 dark:border-gray-600">
-          <div class="px-4 py-2 bg-white rounded-t-lg dark:bg-gray-800">
-            <div for="comment" class="sr-only">
-              Your comment
-            </div>
-            <div className="w-full px-0 text-sl text-gray-900 bg-white border-0 dark:bg-gray-800 focus:ring-0 dark:text-white dark:placeholder-gray-400">
-              He is very
-              <mark class="px-2 text-white bg-[#dc2626] rounded dark:bg-blue-500">
-                mad
-              </mark>
-              and
-              <mark class="px-2 text-white bg-[#dc2626] rounded dark:bg-blue-500">
-                incompetent
-              </mark>
-              . I will{" "}
-              <mark class="px-2 text-white bg-[#dc2626] rounded dark:bg-blue-500">
-                kill
-              </mark>
-              you, go away, the existence of such people should be erased from
-              here. lorem200
-            </div>
-          </div>
-          <div class="flex items-center justify-between px-3 py-2 border-t dark:border-gray-600">
-            <div class="inline-flex items-center py-2.5 px-4 text-xl font-medium text-center rounded-lg focus:ring-4 focus:ring-blue-200 dark:focus:ring-blue-900 hover:bg-blue-800">
-              <mark class="px-2 text-white bg-[#dc2626] rounded dark:bg-blue-500">
-=======
         <div className="w-full mb-4 border border-gray-200 rounded-lg bg-gray-50 dark:bg-gray-700 dark:border-gray-600">
           <div className="px-4 py-2 bg-white rounded-t-lg dark:bg-gray-800">
             <div htmlFor="comment" className="sr-only">
@@ -407,7 +315,7 @@ function HSD() {
           <div className="flex items-center justify-between px-3 py-2 border-t dark:border-gray-600">
             <div className="inline-flex items-center py-2.5 px-4 text-xl font-medium text-center rounded-lg focus:ring-4 focus:ring-blue-200 dark:focus:ring-blue-900 hover:bg-blue-800">
               <mark className="px-2 text-white bg-[#dc2626] rounded dark:bg-blue-500">
->>>>>>> nikhil
+
                 Hate
               </mark>
               Speech Detector
@@ -415,21 +323,12 @@ function HSD() {
           </div>
         </div>
       </div>
-<<<<<<< HEAD
-      <div className="flex w-full h-[25rem]">
-        <div className="w-full flex items-center justify-center"></div>
-      </div>
-=======
       {/* <div className="flex w-full h-[25rem]">
         <div className="w-full flex items-center justify-center"></div>
       </div> */}
->>>>>>> nikhil
+
     </>
   );
 }
 
-<<<<<<< HEAD
-export default Hsd;
-=======
 export default HSD;
->>>>>>> nikhil
