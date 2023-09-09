@@ -15,6 +15,8 @@ import Signup from "./components/Signup";
 
 import AlertState from './context/alertState/AlertState';
 import LogState from './context/logState/LogState';
+import CS_DP from './components/CS_DP';
+import PR_DS from './components/PR_DS';
 
 
 function App() {
@@ -30,7 +32,8 @@ function App() {
             <Routes>
 
               <Route exact path = '/' element = {<Home /> } />
-              <Route exact path = '/education' element = {<Education /> } />
+              <Route exact path = '/cyberSecurity' element = {<CS_DP /> } />
+              <Route exact path = '/privacyRisk' element = {<PR_DS /> } />
               <Route exact path = '/hsd' element = {<HSD /> } />
               <Route exact path = '/tools' element = {<Tools /> } />
               <Route exact path = '/toolsDetail' element = {<ToolsDetail /> } />
