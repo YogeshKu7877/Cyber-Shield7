@@ -5,6 +5,8 @@ const UserModel = require('../models/Users');
 
 const router = express.Router();
 
+// For Signup , Check User is exist or not if yes send to message of already exists 
+// Use post request because we are taking data from frontend , store data in DataBase and don't want to show in url
 router.post("/" , async (req , res) => {
     const user = req.body;
     const existUser = await UserModel.findOne({email : user.email});

@@ -1,37 +1,25 @@
-import { Fragment, useState } from 'react'
-import { Link } from 'react-router-dom';
+import { Fragment, useContext, useState } from 'react'
+import { Link, useNavigate } from 'react-router-dom';
 import { Dialog, Disclosure, Popover, Transition } from '@headlessui/react'
 import {
-  ArrowPathIcon,
   Bars3Icon, 
-  ChartPieIcon,
-  CursorArrowRaysIcon,
-  FingerPrintIcon,
-  SquaresPlusIcon,
   XMarkIcon,
 } from '@heroicons/react/24/outline'
 import { ChevronDownIcon, PhoneIcon, PlayCircleIcon } from '@heroicons/react/20/solid'
+import Alert from './Alert';
+import LogContext from '../context/logState/LogContext';
+import AlertContext from '../context/alertState/AlertContext';
 
 const products = [
-  { name: 'Cyber Security', description: 'Discover the significance of digital privacy in the online world.', href: '/cyberSecurity', 
-  // icon: ChartPieIcon 
-},
-  { name: 'Digital Privacy', description: 'Explore expert tips for safeguarding your online privacy.', href: '/cyberSecurity',
-  //  icon: CursorArrowRaysIcon 
-  },
-  { name: 'Privacy risks and threats', description: 'Identify common privacy risks and threats in the digital landscape.', href: '/privacyRisk',
-  //  icon: FingerPrintIcon 
-  },
-  { name: 'Data security', description: 'Learn best practices for securing your data and personal information.', href: '/privacyRisk',
-  //  icon: SquaresPlusIcon 
-  },
-  { name: 'Hate Speech Detection', description: 'Effortlessly identify and combat hate speech online.', href: '/hsd',
-  //  icon: ArrowPathIcon 
-  },
+  { name: 'Cyber Security', description: 'Discover the significance of digital privacy in the online world.', href: '/cyberSecurity'},
+  { name: 'Digital Privacy', description: 'Explore expert tips for safeguarding your online privacy.', href: '/digitalPrivacy'},
+  { name: 'Privacy risks and threats', description: 'Identify common privacy risks and threats in the digital landscape.', href: '/privacyRisk'},
+  { name: 'Data security', description: 'Learn best practices for securing your data and personal information.', href: '/dataSecurity'},
+  { name: 'Hate Speech Detection', description: 'Effortlessly identify and combat hate speech online.', href: '/hsd'},
 ]
 const callsToAction = [
   { name: 'privacy-focused tools', href: '/tools', icon: PlayCircleIcon },
-  { name: 'Report Cyber Crime', href: '/privacyRisk', icon: PhoneIcon },
+  { name: 'Report Cyber Crime', href: '/reporting', icon: PhoneIcon },
 ]
 
 function classNames(...classes) {
@@ -39,11 +27,21 @@ function classNames(...classes) {
 }
 
 export default function NavBar() {
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+
+  const navigate = useNavigate();
+
+  const LObj = useContext(LogContext);
+  const AObj = useContext(AlertContext);
+
+  const handleLogout = () => {
+    AObj.showAlert("Log Out Successfull" , "Success" , "green");
+    LObj.fillData(null);
+  };
 
   return (
     <>
-      <header className="bg-[#ebf4f5]">
+      <header className="bg-[#ebf4f5] sticky top-0 z-10">
         <nav className="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8 shadow-lg" aria-label="Global">
           <div className="flex lg:flex-1">
             <Link to="/" className="-m-1.5 p-1.5">
@@ -113,17 +111,23 @@ export default function NavBar() {
               </Transition>
             </Popover>
 
-            <Link to="/" className="text-sm font-semibold leading-6 text-gray-900">
+            <Link to="/aboutUs" className="text-sm font-semibold leading-6 text-gray-900">
               About Us
             </Link>
-            <Link to="/" className="text-sm font-semibold leading-6 text-gray-900">
+            <Link to="/reporting" className="text-sm font-semibold leading-6 text-gray-900">
               Reporting
             </Link>
           </Popover.Group>
           <div className="hidden lg:flex lg:flex-1 lg:justify-end">
-            <Link to="/" className="text-sm font-semibold leading-6 text-gray-900">
-              Log in <span aria-hidden="true">&rarr;</span>
-            </Link>
+            
+            {!LObj.cookies.access_token ? 
+              <button onClick = {(e) => navigate("/signin")} className="text-sm font-semibold leading-6 text-gray-900">
+                Log in <span aria-hidden="true">&rarr;</span>
+              </button> :
+              <button onClick = {handleLogout} className="text-sm font-semibold leading-6 text-gray-900">
+                Log out <span aria-hidden="true">&rarr;</span>
+              </button>
+            }
           </div>
         </nav>
         <Dialog as="div" className="lg:hidden" open={mobileMenuOpen} onClose={setMobileMenuOpen}>
@@ -132,7 +136,7 @@ export default function NavBar() {
             <div className="flex items-center justify-between">
               <Link to="/" className="-m-1.5 p-1.5">
                 <span className="sr-only">Your Company</span>
-                <span class="self-center text-2xl font-semibold whitespace-nowrap text-[#172554]">Cyber Shield</span>
+                <span className="self-center text-2xl font-semibold whitespace-nowrap text-[#172554]">Cyber Shield</span>
               </Link>
               <button
                 type="button"
@@ -190,40 +194,30 @@ export default function NavBar() {
                     Reporting
                   </Link>
                 </div>
-                <button class="text-white bg-gradient-to-r from-blue-400 via-blue-600 to-blue-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 shadow-lg shadow-blue-500/50 dark:shadow-lg dark:shadow-blue-800/80 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 ">
-                  <span  
-                  class="relative px-5 py-2.5 transition-all ease-in duration-75"
-                  > 
-                      Log in
-                  </span>
-                </button>
+                
+                {!LObj.cookies.access_token ? 
+                  <button onClick = {(e) => navigate("/signin")} className = "text-white bg-gradient-to-r from-blue-400 via-blue-600 to-blue-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 shadow-lg shadow-blue-500/50 dark:shadow-lg dark:shadow-blue-800/80 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 ">
+                     <span  
+                    className="relative px-5 py-2.5 transition-all ease-in duration-75"
+                    > 
+                        Log in
+                      </span>
+                  </button> :
+                  <button onClick = {handleLogout} className="text-white bg-gradient-to-r from-blue-400 via-blue-600 to-blue-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 shadow-lg shadow-blue-500/50 dark:shadow-lg dark:shadow-blue-800/80 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 ">
+                    <span  
+                    className="relative px-5 py-2.5 transition-all ease-in duration-75"
+                    > 
+                        Log out
+                    </span>
+                  </button>
+                }
+
               </div>
             </div>
           </Dialog.Panel>
         </Dialog>
+        <Alert/>
       </header>
-{/* 
-        Alert Red 
-      <div className=' flex item-center p-4 mb-4 m-2 text-sm text-red-800 border border-red-300 rounded-lg bg-red-50 dark:text-red-400 dark:border-red-800' role="alert">
-        <svg class="flex-shrink-0 inline w-4 h-4 mr-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
-          <path d='M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5ZM9.5 4a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3ZM12 15H8a1 1 0 0 1 0-2h1v-3H8a1 1 0 0 1 0-2h2a1 1 0 0 1 1 1v4h1a1 1 0 0 1 0 2Z'/>
-        </svg>
-        <span class='sr-only'>info</span>
-        <div>
-        <span class="font-medium">Danger alert!</span> 
-        </div>
-      </div>    
-
-          Green Alert 
-      <div class=" flex items-center p-4 mb-4 m-2 text-sm text-green-800 border border-green-300 rounded-lg bg-green-50 dark:bg-gray-800 dark:text-green-400 dark:border-green-800" role="alert">
-        <svg class="flex-shrink-0 inline w-4 h-4 mr-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
-          <path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5ZM9.5 4a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3ZM12 15H8a1 1 0 0 1 0-2h1v-3H8a1 1 0 0 1 0-2h2a1 1 0 0 1 1 1v4h1a1 1 0 0 1 0 2Z"/>
-        </svg>
-        <span class="sr-only">Info</span>
-        <div>
-          <span class="font-medium">Success alert!</span>
-        </div>
-      </div> */}
     </>
   )
 }

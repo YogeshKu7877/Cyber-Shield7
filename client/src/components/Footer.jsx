@@ -1,10 +1,15 @@
 import React from "react";
+<<<<<<< HEAD
 import { Disclosure } from "@headlessui/react";
 import { ChevronUpIcon } from "@heroicons/react/20/solid";
+=======
+import {Link} from "react-router-dom";
+>>>>>>> nikhil
 
 const Footer = () => {
   return (
     <>
+<<<<<<< HEAD
       <div className="w-full px-4 pt-16">
         <div className="flex flex-col items-center justify-between w-full font-medium text-left rounded-2xl bg-white p-2">
           <Disclosure>
@@ -136,6 +141,8 @@ const Footer = () => {
         </div>
       </div>
 
+=======
+>>>>>>> nikhil
       <footer className="bg-gray-900 text-black">
         <div className="md:flex md:justify-between md:items-center sm:px-12 px-4 bg-[#ebf4f5] py-7">
           <h1
@@ -164,6 +171,7 @@ const Footer = () => {
             >
               <ul className="flex flex-wrap items-center mb-6 text-[1.1rem] font-medium text-white sm:mb-0 dark:text-gray-400">
                 <li>
+<<<<<<< HEAD
                   <a href="#" className="mr-4 hover:underline md:mr-6 ">
                     Home
                   </a>
@@ -182,6 +190,26 @@ const Footer = () => {
                   <a href="#" className="hover:underline">
                     Reporting
                   </a>
+=======
+                  <Link to="/" className="mr-4 hover:underline md:mr-6 ">
+                    Home
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/cyberSecurity" className="mr-4 hover:underline md:mr-6">
+                    Education
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/aboutUs" className="mr-4 hover:underline md:mr-6 ">
+                    About Us
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/reporting" className="hover:underline">
+                    Reporting
+                  </Link>
+>>>>>>> nikhil
                 </li>
               </ul>
             </div>
@@ -189,9 +217,15 @@ const Footer = () => {
           <hr className="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
           <span className="block text-sm text-gray-500 sm:text-center dark:text-gray-400">
             © 2023{" "}
+<<<<<<< HEAD
             <a href="https://flowbite.com/" className="hover:underline">
               Cyber Shield™
             </a>
+=======
+            <Link to="/" className="hover:underline">
+              Cyber Shield™
+            </Link>
+>>>>>>> nikhil
             . All Rights Reserved.
           </span>
         </div>
@@ -200,4 +234,8 @@ const Footer = () => {
   );
 };
 
+<<<<<<< HEAD
 export default Footer;
+=======
+export default Footer;
+>>>>>>> nikhil
