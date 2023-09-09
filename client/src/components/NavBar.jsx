@@ -12,14 +12,14 @@ import AlertContext from '../context/alertState/AlertContext';
 
 const products = [
   { name: 'Cyber Security', description: 'Discover the significance of digital privacy in the online world.', href: '/cyberSecurity'},
-  { name: 'Digital Privacy', description: 'Explore expert tips for safeguarding your online privacy.', href: '/cyberSecurity'},
+  { name: 'Digital Privacy', description: 'Explore expert tips for safeguarding your online privacy.', href: '/digitalPrivacy'},
   { name: 'Privacy risks and threats', description: 'Identify common privacy risks and threats in the digital landscape.', href: '/privacyRisk'},
-  { name: 'Data security', description: 'Learn best practices for securing your data and personal information.', href: '/privacyRisk'},
+  { name: 'Data security', description: 'Learn best practices for securing your data and personal information.', href: '/dataSecurity'},
   { name: 'Hate Speech Detection', description: 'Effortlessly identify and combat hate speech online.', href: '/hsd'},
 ]
 const callsToAction = [
   { name: 'privacy-focused tools', href: '/tools', icon: PlayCircleIcon },
-  { name: 'Report Cyber Crime', href: '/privacyRisk', icon: PhoneIcon },
+  { name: 'Report Cyber Crime', href: '/reporting', icon: PhoneIcon },
 ]
 
 function classNames(...classes) {
