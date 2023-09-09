@@ -10,6 +10,11 @@ export default function Tools() {
 
   return (
     <>
+      <h4 className="mb-2 text-3xl text-center my-8 font-bold text-gray-900 dark:text-white">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r to-emerald-600 from-sky-400">
+                Privacy-Focused Tools
+            </span>
+        </h4>
       <div style={{ width: "100%", height: "100%", padding: "20px" }}>
         { TObj.arrayOfTools.map((tool, key) => {
           return (

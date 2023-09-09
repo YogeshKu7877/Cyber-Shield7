@@ -150,10 +150,10 @@ function App() {
               <Routes>
 
                 <Route exact path = '/' element = {<Home /> } />
-                <Route exact path = '/cyberSecurity' element = {<EducationStructure array={cyberSecurity}/> } />
-                <Route exact path = '/digitalPrivacy' element = {<EducationStructure array={digitalPrivacy} /> } />
-                <Route exact path = '/privacyRisk' element = {<EducationStructure array={privacyRisk} /> } />
-                <Route exact path = '/dataSecurity' element = {<EducationStructure array={dataSecurity} /> } />
+                <Route exact path = '/cyberSecurity' element = {<EducationStructure heading="Cyber Security" array={cyberSecurity}/> } />
+                <Route exact path = '/digitalPrivacy' element = {<EducationStructure heading="Digital Privacy" array={digitalPrivacy} /> } />
+                <Route exact path = '/privacyRisk' element = {<EducationStructure heading="Privacy Risk and Threats" array={privacyRisk} /> } />
+                <Route exact path = '/dataSecurity' element = {<EducationStructure heading="Data Security" array={dataSecurity} /> } />
                 <Route exact path = '/hsd' element = {<HSD /> } />
                 <Route exact path = '/tools' element = {<Tools /> } />
                 <Route exact path = '/toolsDetail/:toolName' element = {<ToolsDetail /> } />
