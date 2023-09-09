@@ -11,7 +11,7 @@ const Footer = () => {
             {({ open }) => (
               <>
                 <Disclosure.Button className="flex w-full justify-between rounded-lg bg-purple-100 px-5 py-2 mb-5 text-left text-sm font-medium text-blue-900 hover:bg-[#ebf4f5] focus:outline-none focus-visible:ring focus-visible:ring-blue-500 focus-visible:ring-opacity-75">
-                  <span>Question?</span>
+                  <span>How can I stay updated on the latest cybersecurity trends and news?</span>
                   <ChevronUpIcon
                     className={`${
                       open ? "rotate-180 transform" : ""
@@ -19,9 +19,9 @@ const Footer = () => {
                   />
                 </Disclosure.Button>
                 <Disclosure.Panel className="px-4 pb-2 text-sm text-gray-500">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Expedita consequuntur iusto facilis dolores illum voluptatem
-                  sint, quos quibusdam possimus labore?
+                CyberShield regularly publishes articles, blog posts, and newsletters to keep you informed about the 
+                latest developments in the cybersecurity landscape. By subscribing to our updates, 
+                you'll stay ahead of emerging threats and learn about effective countermeasures.
                 </Disclosure.Panel>
               </>
             )}
@@ -32,7 +32,7 @@ const Footer = () => {
             {({ open }) => (
               <>
                 <Disclosure.Button className="flex w-full justify-between rounded-lg bg-purple-100 px-5 py-2 mb-5 text-left text-sm font-medium text-blue-900 hover:bg-[#ebf4f5] focus:outline-none focus-visible:ring focus-visible:ring-blue-500 focus-visible:ring-opacity-75">
-                  <span>Question?</span>
+                  <span>What is CyberShield and how can it help me protect myself from cyber attacks?</span>
                   <ChevronUpIcon
                     className={`${
                       open ? "rotate-180 transform" : ""
@@ -40,9 +40,10 @@ const Footer = () => {
                   />
                 </Disclosure.Button>
                 <Disclosure.Panel className="px-4 pb-2 text-sm text-gray-500">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Expedita consequuntur iusto facilis dolores illum voluptatem
-                  sint, quos quibusdam possimus labore?
+                  CyberShield is a comprehensive platform designed to empower individuals 
+                  with tools and techniques to secure themselves from cyber threats. 
+                  It provides a range of resources, tutorials, and practical advice 
+                  to enhance your online safety.
                 </Disclosure.Panel>
               </>
             )}
@@ -53,7 +54,7 @@ const Footer = () => {
             {({ open }) => (
               <>
                 <Disclosure.Button className="flex w-full justify-between rounded-lg bg-purple-100 px-5 py-2 mb-5 text-left text-sm font-medium text-blue-900 hover:bg-[#ebf4f5] focus:outline-none focus-visible:ring focus-visible:ring-blue-500 focus-visible:ring-opacity-75">
-                  <span>Question?</span>
+                  <span>How does the HSDR (Hate Speech Detection and Report) function work?</span>
                   <ChevronUpIcon
                     className={`${
                       open ? "rotate-180 transform" : ""
@@ -61,9 +62,10 @@ const Footer = () => {
                   />
                 </Disclosure.Button>
                 <Disclosure.Panel className="px-4 pb-2 text-sm text-gray-500">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Expedita consequuntur iusto facilis dolores illum voluptatem
-                  sint, quos quibusdam possimus labore?
+                The HSDR function in CyberShield is a unique tool that allows you to check for abusive or hate speech 
+                within a paragraph you paste into the input box. 
+                It utilizes advanced algorithms to analyze the text and promptly identifies 
+                any potentially harmful content.
                 </Disclosure.Panel>
               </>
             )}
@@ -74,7 +76,7 @@ const Footer = () => {
             {({ open }) => (
               <>
                 <Disclosure.Button className="flex w-full justify-between rounded-lg bg-purple-100 px-5 py-2 mb-5 text-left text-sm font-medium text-blue-900 hover:bg-[#ebf4f5] focus:outline-none focus-visible:ring focus-visible:ring-blue-500 focus-visible:ring-opacity-75">
-                  <span>Question?</span>
+                  <span>Can I report instances of hate speech detected by HSDR?</span>
                   <ChevronUpIcon
                     className={`${
                       open ? "rotate-180 transform" : ""
@@ -82,9 +84,9 @@ const Footer = () => {
                   />
                 </Disclosure.Button>
                 <Disclosure.Panel className="px-4 pb-2 text-sm text-gray-500">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Expedita consequuntur iusto facilis dolores illum voluptatem
-                  sint, quos quibusdam possimus labore?
+                Yes, you can! If HSDR identifies hate speech in the content you provided, 
+                you will have the option to report it. 
+                Our system takes user reports seriously and investigates them thoroughly to ensure a safer online environment.
                 </Disclosure.Panel>
               </>
             )}
@@ -95,7 +97,7 @@ const Footer = () => {
             {({ open }) => (
               <>
                 <Disclosure.Button className="flex w-full justify-between rounded-lg bg-purple-100 px-5 py-2 mb-5 text-left text-sm font-medium text-blue-900 hover:bg-[#ebf4f5] focus:outline-none focus-visible:ring focus-visible:ring-blue-500 focus-visible:ring-opacity-75">
-                  <span>Question?</span>
+                  <span>What are some basic cybersecurity practices I should implement?</span>
                   <ChevronUpIcon
                     className={`${
                       open ? "rotate-180 transform" : ""
@@ -103,9 +105,9 @@ const Footer = () => {
                   />
                 </Disclosure.Button>
                 <Disclosure.Panel className="px-4 pb-2 text-sm text-gray-500">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Expedita consequuntur iusto facilis dolores illum voluptatem
-                  sint, quos quibusdam possimus labore?
+                CyberShield offers a wealth of resources to guide you on fundamental cybersecurity practices. 
+                These include creating strong, unique passwords, 
+                regularly updating software, being cautious of phishing attempts, and using reputable security tools.
                 </Disclosure.Panel>
               </>
             )}
@@ -116,7 +118,7 @@ const Footer = () => {
             {({ open }) => (
               <>
                 <Disclosure.Button className="flex w-full justify-between rounded-lg bg-purple-100 px-5 py-2 mb-5 text-left text-sm font-medium text-blue-900 hover:bg-[#ebf4f5] focus:outline-none focus-visible:ring focus-visible:ring-blue-500 focus-visible:ring-opacity-75">
-                  <span>Question?</span>
+                  <span>Are there specific tools and techniques recommended for different types of cyber threats?</span>
                   <ChevronUpIcon
                     className={`${
                       open ? "rotate-180 transform" : ""
@@ -124,9 +126,9 @@ const Footer = () => {
                   />
                 </Disclosure.Button>
                 <Disclosure.Panel className="px-4 pb-2 text-sm text-gray-500">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Expedita consequuntur iusto facilis dolores illum voluptatem
-                  sint, quos quibusdam possimus labore?
+                Absolutely! CyberShield provides specialized guides for various types of cyber threats, 
+                such as malware, phishing, and social engineering attacks. 
+                These guides offer step-by-step instructions on how to defend against specific threats.
                 </Disclosure.Panel>
               </>
             )}
