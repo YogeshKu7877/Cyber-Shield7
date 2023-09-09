@@ -1,7 +1,10 @@
 import React, { useState } from "react";
-import HateSDweb from "../asserts/img/HSD.jpg";
 import { useEffect } from "react";
 import axios from 'axios';
+
+//Image
+import HateSDweb from "../asserts/img/HSD.jpg";
+
 function HSD() {
 
   const [words , setWords] = useState([]);
@@ -10,6 +13,7 @@ function HSD() {
   const [isSet , setIsSet] = useState(true);
 
   useEffect(() => {
+    // eslint-disable-next-line
     axios.get("http://localhost:3001/dictionary").then((response) => {
       setWords(response.data.data);
     }).catch((err) => {console.log(err)});
@@ -161,7 +165,7 @@ function HSD() {
                   rapidly, influencing public opinion and inciting real-world
                   actions.
                 </p>
-                <ul role="list" className="mt-8 space-y-8 text-gray-600">
+                <ul className="mt-8 space-y-8 text-gray-600">
                   <li className="flex gap-x-3">
                     <span>
                       <strong className="font-semibold text-gray-900">

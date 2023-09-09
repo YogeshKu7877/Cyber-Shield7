@@ -12,6 +12,8 @@ import ToolsDetail from "./components/ToolsDetail";
 import AboutUs from "./components/AboutUs";
 import Reporting from './components/Reporting';
 
+import Footer from './components/Footer';
+
 import Signin from "./components/Signin";
 import Signup from "./components/Signup";
 
@@ -47,6 +49,8 @@ function App() {
                 <Route exact path = '/signup' element = {<Signup /> } />
 
               </Routes>
+
+              <Footer />
             
             </BrowserRouter>
 

@@ -26,8 +26,6 @@ export default function Signin() {
 
       await axios.post("http://localhost:3001/signin" , inputs).then((response) => {
           const resMsg = response.data.message;
-          // set cookies
-          // log set
           if(resMsg === "User has Successfully loged in"){
               AObj.showAlert(resMsg , "Success" , "green");
               LObj.fillData(response.data);
@@ -64,7 +62,7 @@ export default function Signin() {
                   </div>
                   <label htmlFor="remember" className="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">Remember me</label>
                 </div>
-                <Link to="" className="ml-auto text-sm text-blue-700 hover:underline dark:text-blue-500">Lost Password?</Link>
+                <Link  className="ml-auto text-sm text-blue-700 hover:underline dark:text-blue-500">Lost Password?</Link>
               </div>
               <button type="submit" onClick={(e) =>handleSubmit(e)} className="w-full text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Login</button>
               <div className="text-sm font-medium text-gray-500 dark:text-gray-300">

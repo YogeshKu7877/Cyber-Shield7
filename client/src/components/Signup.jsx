@@ -2,10 +2,13 @@ import React, { useContext, useState } from 'react'
 import '../App.css';
 import { Link, useNavigate } from 'react-router-dom';
 import axios from 'axios';
+
+//Context
 import AlertContext from '../context/alertState/AlertContext';
 
 export default function Signup() {
 
+  //Context
   const AObj = useContext(AlertContext);
 
   const [inputs , setInputs] = useState({

@@ -7,6 +7,9 @@ const UserModel = require('../models/Users');
 
 const router = express.Router();
 
+
+// For login , Check User is exist or not if yes then check password 
+// Use post request because we are taking data from frontend and don't want to show in url
 router.post("/" , async (req , res) => {
     const user = req.body;
     const existUser = await UserModel.findOne({email : user.email});

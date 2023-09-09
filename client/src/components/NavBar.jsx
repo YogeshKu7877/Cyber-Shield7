@@ -1,13 +1,8 @@
 import { Fragment, useContext, useState } from 'react'
-import { Link, Navigate, useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { Dialog, Disclosure, Popover, Transition } from '@headlessui/react'
 import {
-  ArrowPathIcon,
   Bars3Icon, 
-  ChartPieIcon,
-  CursorArrowRaysIcon,
-  FingerPrintIcon,
-  SquaresPlusIcon,
   XMarkIcon,
 } from '@heroicons/react/24/outline'
 import { ChevronDownIcon, PhoneIcon, PlayCircleIcon } from '@heroicons/react/20/solid'
@@ -16,21 +11,11 @@ import LogContext from '../context/logState/LogContext';
 import AlertContext from '../context/alertState/AlertContext';
 
 const products = [
-  { name: 'Cyber Security', description: 'Discover the significance of digital privacy in the online world.', href: '/cyberSecurity', 
-  // icon: ChartPieIcon 
-},
-  { name: 'Digital Privacy', description: 'Explore expert tips for safeguarding your online privacy.', href: '/cyberSecurity',
-  //  icon: CursorArrowRaysIcon 
-  },
-  { name: 'Privacy risks and threats', description: 'Identify common privacy risks and threats in the digital landscape.', href: '/privacyRisk',
-  //  icon: FingerPrintIcon 
-  },
-  { name: 'Data security', description: 'Learn best practices for securing your data and personal information.', href: '/privacyRisk',
-  //  icon: SquaresPlusIcon 
-  },
-  { name: 'Hate Speech Detection', description: 'Effortlessly identify and combat hate speech online.', href: '/hsd',
-  //  icon: ArrowPathIcon 
-  },
+  { name: 'Cyber Security', description: 'Discover the significance of digital privacy in the online world.', href: '/cyberSecurity'},
+  { name: 'Digital Privacy', description: 'Explore expert tips for safeguarding your online privacy.', href: '/cyberSecurity'},
+  { name: 'Privacy risks and threats', description: 'Identify common privacy risks and threats in the digital landscape.', href: '/privacyRisk'},
+  { name: 'Data security', description: 'Learn best practices for securing your data and personal information.', href: '/privacyRisk'},
+  { name: 'Hate Speech Detection', description: 'Effortlessly identify and combat hate speech online.', href: '/hsd'},
 ]
 const callsToAction = [
   { name: 'privacy-focused tools', href: '/tools', icon: PlayCircleIcon },
@@ -56,7 +41,7 @@ export default function NavBar() {
 
   return (
     <>
-      <header className="bg-[#ebf4f5]">
+      <header className="bg-[#ebf4f5] sticky top-0 z-10">
         <nav className="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8 shadow-lg" aria-label="Global">
           <div className="flex lg:flex-1">
             <Link to="/" className="-m-1.5 p-1.5">
@@ -231,8 +216,8 @@ export default function NavBar() {
             </div>
           </Dialog.Panel>
         </Dialog>
+        <Alert/>
       </header>
-      <Alert/>
     </>
   )
 }
