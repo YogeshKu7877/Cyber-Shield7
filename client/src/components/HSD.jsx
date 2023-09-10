@@ -1,24 +1,27 @@
-
 import React, { useState } from "react";
 import { useEffect } from "react";
-import axios from 'axios';
+import axios from "axios";
 
 //Image
 import HateSDweb from "../asserts/img/HSD.jpg";
 
 function HSD() {
-
-  const [words , setWords] = useState([]);
-  const [string , setString] = useState("");
-  const [strArray , setStrArray] = useState([]);
-  const [isSet , setIsSet] = useState(true);
+  const [words, setWords] = useState([]);
+  const [string, setString] = useState("");
+  const [strArray, setStrArray] = useState([]);
+  const [isSet, setIsSet] = useState(true);
 
   useEffect(() => {
     // eslint-disable-next-line
-    axios.get("http://localhost:3001/dictionary").then((response) => {
-      setWords(response.data.data);
-    }).catch((err) => {console.log(err)});
-  } , []);
+    axios
+      .get("http://localhost:3001/dictionary")
+      .then((response) => {
+        setWords(response.data.data);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  }, []);
 
   const handleChange = (e) => {
     setString(e.target.value);
@@ -27,11 +30,11 @@ function HSD() {
 
   const handleCheck = (e) => {
     e.preventDefault();
-    if(string !== ""){
+    if (string !== "") {
       setStrArray(string.split(" "));
       setIsSet(true);
     }
-  }
+  };
 
   return (
     <>
@@ -40,13 +43,11 @@ function HSD() {
           <div className="mx-auto mt-[-40px] max-w-2xl lg:mx-0">
             <h1 className="mb-4 text-4xl font-extrabold leading-none tracking-tight text-gray-900 md:text-4xl lg:text-5xl dark:text-white">
               <mark className="px-2 text-white bg-[#dc2626] rounded dark:bg-blue-500">
-
                 Hate
               </mark>
               Speech Detection
             </h1>
             <p className="mt-2 text-lg leading-8 text-gray-600">
-
               Automated identification of hate speech in digital communication
               using technology and algorithms.
             </p>
@@ -58,7 +59,6 @@ function HSD() {
                   What is Hate speech?
                 </h5>
                 <p className="mb-5 text-base text-gray-500 sm:text-lg dark:text-gray-400">
-
                   Hate speech is harmful, discriminatory language or expressions
                   that target individuals or groups based on their
                   characteristics, such as race, religion, gender, or ethnicity,
@@ -73,7 +73,6 @@ function HSD() {
                   What is Hate Speech Detection?
                 </h5>
                 <p className="mb-5 text-base text-gray-500 sm:text-lg dark:text-gray-400">
-
                   Hate Speech Detection is the use of technology and algorithms
                   to automatically identify and flag instances of hate speech or
                   offensive content in digital communication, with the goal of
@@ -88,7 +87,6 @@ function HSD() {
                   What does it do?
                 </h5>
                 <p className="mb-5 text-base text-gray-500 sm:text-lg dark:text-gray-400">
-
                   Hate Speech Detection helps create a more inclusive and
                   respectful digital environment by identifying and addressing
                   harmful content, such as harassment and incitement to
@@ -140,7 +138,6 @@ function HSD() {
                 <h1 className="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
                   Why we need{" "}
                   <span className="underline underline-offset-3 decoration-8 decoration-blue-400 dark:decoration-blue-600">
-
                     Hate Speech Detector
                   </span>
                   ?
@@ -173,7 +170,6 @@ function HSD() {
                   actions.
                 </p>
                 <ul className="mt-8 space-y-8 text-gray-600">
-
                   <li className="flex gap-x-3">
                     <span>
                       <strong className="font-semibold text-gray-900">
@@ -256,19 +252,17 @@ function HSD() {
         </div>
       </div>
 
-
-      <div className="w-full h-screen mb-9 p-4 text-center bg-[#94a3b8] border border-gray-200 rounded-lg shadow sm:p-8 dark:bg-gray-800 dark:border-gray-700">
+      <div className="w-full mb-9 p-4 text-center bg-[#94a3b8] border border-gray-200 rounded-lg shadow sm:p-8 dark:bg-gray-800 dark:border-gray-700">
         <form>
           <div className="w-full mb-4 border border-gray-200 rounded-lg bg-gray-50 dark:bg-gray-700 dark:border-gray-600">
             <div className="px-4 py-2 bg-white rounded-t-lg dark:bg-gray-800">
               <label htmlFor="comment" className="sr-only">
-
                 Your comment
               </label>
               <textarea
                 id="comment"
-                name = "string"
-                onChange = {(e) => handleChange(e)}
+                name="string"
+                onChange={(e) => handleChange(e)}
                 rows="4"
                 className="w-full px-0 text-sm text-gray-900 bg-white border-0 dark:bg-gray-800 focus:ring-0 dark:text-white dark:placeholder-gray-400"
                 placeholder="Write a text..."
@@ -277,13 +271,12 @@ function HSD() {
             </div>
             <div className="flex items-center justify-between px-3 py-2 border-t dark:border-gray-600">
               <button
-                disabled = {isSet}
+                disabled={isSet}
                 onClick={(e) => handleCheck(e)}
                 type="submit"
                 className="inline-flex items-center py-2.5 px-4 text-xs font-medium text-center text-white bg-blue-700 rounded-lg focus:ring-4 focus:ring-blue-200 dark:focus:ring-blue-900 hover:bg-blue-800"
               >
                 Check content
-
               </button>
             </div>
           </div>
@@ -294,28 +287,27 @@ function HSD() {
               Your comment
             </div>
             <div className="w-full px-0 text-sl text-gray-900 bg-white border-0 dark:bg-gray-800 focus:ring-0 dark:text-white dark:placeholder-gray-400">
-              {strArray.length === 0 ? "No Value Entered" :
-
-                strArray.map((val , key) => {
-                  if(words.includes(val.toLowerCase())){
-                    return ( 
-                      <mark key={key} className="px-2 text-white bg-[#dc2626] rounded dark:bg-blue-500">
-                        {val}
-                      </mark>
-                    );
-                  }
-                  else{
-                    return( <> {val}  </> );
-                  }
-                })
-              }
-              
+              {strArray.length === 0
+                ? "No Value Entered"
+                : strArray.map((val, key) => {
+                    if (words.includes(val.toLowerCase())) {
+                      return (
+                        <mark
+                          key={key}
+                          className="px-2 text-white bg-[#dc2626] rounded dark:bg-blue-500"
+                        >
+                          {val}
+                        </mark>
+                      );
+                    } else {
+                      return <> {val} </>;
+                    }
+                  })}
             </div>
           </div>
           <div className="flex items-center justify-between px-3 py-2 border-t dark:border-gray-600">
             <div className="inline-flex items-center py-2.5 px-4 text-xl font-medium text-center rounded-lg focus:ring-4 focus:ring-blue-200 dark:focus:ring-blue-900 hover:bg-blue-800">
               <mark className="px-2 text-white bg-[#dc2626] rounded dark:bg-blue-500">
-
                 Hate
               </mark>
               Speech Detector
@@ -323,10 +315,6 @@ function HSD() {
           </div>
         </div>
       </div>
-      {/* <div className="flex w-full h-[25rem]">
-        <div className="w-full flex items-center justify-center"></div>
-      </div> */}
-
     </>
   );
 }

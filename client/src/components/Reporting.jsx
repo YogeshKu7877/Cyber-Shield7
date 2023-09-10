@@ -1,25 +1,29 @@
 import React, { useContext, useState } from "react";
-import AlertContext from '../context/alertState/AlertContext';
-import axios from 'axios';
+import AlertContext from "../context/alertState/AlertContext";
+import axios from "axios";
 function Report() {
-  const [data , setData] = useState({
-    email : "",
-    report : ""
+  const [data, setData] = useState({
+    email: "",
+    report: "",
   });
 
   const AObj = useContext(AlertContext);
 
   const handleChange = (e) => {
-    setData((values) => ({...values , [e.target.name] : e.target.value}));
+    setData((values) => ({ ...values, [e.target.name]: e.target.value }));
   };
-  const handleReport = async () =>{
-    await axios.post("http://localhost:3001/report" , data).then((response) => {
-      AObj.showAlert(response.data.message , "Success" , "green");
-      setData({
-        email:"",
-        report :""
-      });
-    }).catch((err) => console.log(err));
+  const handleReport = async (e) => {
+    e.preventDefault();
+    await axios
+      .post("http://localhost:3001/report", data)
+      .then((response) => {
+        AObj.showAlert(response.data.message, "Success", "green");
+        setData({
+          email: "",
+          report: "",
+        });
+      })
+      .catch((err) => console.log(err));
   };
   return (
     <>
@@ -103,7 +107,7 @@ function Report() {
               <input
                 value={data.email}
                 name="email"
-                onChange={(e) =>handleChange(e)}
+                onChange={(e) => handleChange(e)}
                 type="email"
                 id="input-group-1"
                 className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
@@ -120,16 +124,15 @@ function Report() {
               <div className="mt-2.5">
                 <textarea
                   value={data.report}
-                  onChange={(e) =>handleChange(e)}
+                  onChange={(e) => handleChange(e)}
                   name="report"
                   id="message"
                   rows={4}
                   className="px-3.5 py-2 bg-red-50 border border-red-500 text-red-900 placeholder-red-700 text-sm rounded-lg focus:ring-red-500 dark:bg-gray-700 focus:border-red-500 block w-full p-2.5 dark:text-red-500 dark:placeholder-red-500 dark:border-red-500"
-
                 />
               </div>
               <button
-                onClick={handleReport}
+                onClick={(e) => handleReport(e)}
                 type="button"
                 className="text-red-700 mt-7 hover:text-white border border-red-700 hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-red-300 font-medium rounded-lg text-sm px-9 py-2.5 text-center mr-2 mb-2 dark:border-red-500 dark:text-red-500 dark:hover:text-white dark:hover:bg-red-600 dark:focus:ring-red-700"
               >

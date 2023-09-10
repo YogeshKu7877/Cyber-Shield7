@@ -1,10 +1,11 @@
 import React from "react";
-import {Link} from "react-router-dom";
+import { Link } from "react-router-dom";
+import AnchorLink from "react-anchor-link-smooth-scroll";
 
 const Footer = () => {
   return (
     <>
-      <footer className="bg-gray-900 text-black">
+      <footer className="relative bg-gray-900 text-black z-50">
         <div className="md:flex md:justify-between md:items-center sm:px-12 px-4 bg-[#ebf4f5] py-7">
           <h1
             className="lg:text-4xl text-3xl md:mb-0 mb-6 lg:leading-normal font-semibold
@@ -37,14 +38,20 @@ const Footer = () => {
                   </Link>
                 </li>
                 <li>
-                  <Link to="/cyberSecurity" className="mr-4 hover:underline md:mr-6">
+                  <Link
+                    to="/cyberSecurity"
+                    className="mr-4 hover:underline md:mr-6"
+                  >
                     Education
                   </Link>
                 </li>
                 <li>
-                  <Link to="/aboutUs" className="mr-4 hover:underline md:mr-6 ">
+                  <AnchorLink
+                    href="#aboutUs"
+                    className="mr-4 hover:underline md:mr-6 "
+                  >
                     About Us
-                  </Link>
+                  </AnchorLink>
                 </li>
                 <li>
                   <Link to="/reporting" className="hover:underline">
@@ -67,6 +74,5 @@ const Footer = () => {
     </>
   );
 };
-
 
 export default Footer;

@@ -243,17 +243,16 @@ function Home() {
               to="/cyberSecurity"
             >
               <h2 className="mt-4 text-xl font-bold text-black">
-                Digital campaigns
+                Strong and Unique Passwords
               </h2>
 
               <p className="mt-1 text-sm text-gray-700">
-                These initiatives reflect our unwavering commitment to not only
-                provide cutting-edge cybersecurity solutions but also to
-                actively contribute to a safer, more inclusive digital
-                environment for all. Through these efforts, we aim to empower
-                individuals and organizations to thrive in the digital age while
-                upholding fundamental values of human rights, inclusivity, and
-                privacy.
+                Use strong, complex passwords that combine upper and lower-case
+                letters, numbers, and symbols. Avoid using easily guessable
+                information like birthdays or common words. Use different
+                passwords for each online account to prevent a breach from
+                affecting multiple ndamental values of human rights,
+                inclusivity, and privacy.
               </p>
             </Link>
             <Link
@@ -261,16 +260,13 @@ function Home() {
               to="/cyberSecurity"
             >
               <h2 className="mt-4 text-xl font-bold text-black">
-                Digital campaigns
+                Two-Factor Authentication (2FA)
               </h2>
 
               <p className="mt-1 text-sm text-gray-700">
-                In today's rapidly evolving digital landscape, information is
-                power. At CyberShield, we understand the importance of proactive
-                outreach and education. Our digital campaigns are meticulously
-                crafted to raise awareness about cybersecurity, equip
-                individuals and businesses with essential knowledge, and promote
-                safe online practices.
+                Enable 2FA whenever possible. It adds an extra layer of security
+                by requiring you to enter a one-time code sent to your mobile
+                device.
               </p>
             </Link>
             <Link
@@ -278,16 +274,13 @@ function Home() {
               to="/cyberSecurity"
             >
               <h2 className="mt-4 text-xl font-bold text-black">
-                Empowering Through Information:
+                Regular Software Updates
               </h2>
 
               <p className="mt-1 text-sm text-gray-700">
-                Our digital campaigns are designed to empower users with
-                practical, actionable information. We cover a wide range of
-                topics, from recognizing phishing attempts to securing personal
-                data. Through engaging content, we strive to demystify
-                cybersecurity, making it accessible to individuals of all
-                backgrounds and levels of expertise.
+                Keep your operating system, browsers, and applications up to
+                date. Cybercriminals often exploit vulnerabilities in outdated
+                software.
               </p>
             </Link>
           </div>
