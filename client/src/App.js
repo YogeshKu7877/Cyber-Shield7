@@ -131,6 +131,7 @@ function App() {
 
   return (
     <>
+    <div className="gradient-color">
       <ToolState>
 
         <LogState>
@@ -166,6 +167,8 @@ function App() {
 
         </LogState>
       </ToolState>
+    </div>
+      
     </>
   );
 }

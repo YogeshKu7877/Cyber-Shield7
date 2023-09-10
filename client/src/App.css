@@ -11,3 +11,7 @@
   overflow: hidden;
   z-index: -1;
 }
+
+.gradient-color {
+  background: linear-gradient(54deg, rgba(128, 255, 242, 1) 36%, rgba(0, 154, 255, 0.6523401596966911) 90%);
+}

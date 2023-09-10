@@ -539,7 +539,7 @@ function Home() {
       </section>
 
       <div className="w-full px-4 pt-16">
-        <div className="flex flex-col items-center justify-between w-full font-medium text-left rounded-2xl bg-white p-2">
+        <div className="flex flex-col items-center justify-between w-full font-medium text-left rounded-2xl bg-white p-2 my-4">
           <Disclosure>
             {({ open }) => (
               <>
@@ -565,7 +565,7 @@ function Home() {
             )}
           </Disclosure>
         </div>
-        <div className="flex flex-col items-center justify-between w-full font-medium text-left rounded-2xl bg-white p-2">
+        <div className="flex my-4 flex-col items-center justify-between w-full font-medium text-left rounded-2xl bg-white p-2">
           <Disclosure>
             {({ open }) => (
               <>
@@ -590,7 +590,7 @@ function Home() {
             )}
           </Disclosure>
         </div>
-        <div className="flex flex-col items-center justify-between w-full font-medium text-left rounded-2xl bg-white p-2">
+        <div className="flex my-4 flex-col items-center justify-between w-full font-medium text-left rounded-2xl bg-white p-2">
           <Disclosure>
             {({ open }) => (
               <>
@@ -616,7 +616,7 @@ function Home() {
             )}
           </Disclosure>
         </div>
-        <div className="flex flex-col items-center justify-between w-full font-medium text-left rounded-2xl bg-white p-2">
+        <div className="flex my-4 flex-col items-center justify-between w-full font-medium text-left rounded-2xl bg-white p-2">
           <Disclosure>
             {({ open }) => (
               <>
@@ -640,7 +640,7 @@ function Home() {
             )}
           </Disclosure>
         </div>
-        <div className="flex flex-col items-center justify-between w-full font-medium text-left rounded-2xl bg-white p-2">
+        <div className="flex my-4 flex-col items-center justify-between w-full font-medium text-left rounded-2xl bg-white p-2">
           <Disclosure>
             {({ open }) => (
               <>
@@ -666,7 +666,7 @@ function Home() {
             )}
           </Disclosure>
         </div>
-        <div className="flex flex-col items-center justify-between w-full font-medium text-left rounded-2xl bg-white p-2">
+        <div className="flex my-4 flex-col items-center justify-between w-full font-medium text-left rounded-2xl bg-white p-2">
           <Disclosure>
             {({ open }) => (
               <>

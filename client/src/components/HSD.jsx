@@ -38,7 +38,7 @@ function HSD() {
 
   return (
     <>
-      <div className=" relative bg-white py-24 sm:py-32 z-[-1]">
+      <div className=" relative bg-white py-24 sm:py-32 ">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="mx-auto mt-[-40px] max-w-2xl lg:mx-0">
             <h1 className="mb-4 text-4xl font-extrabold leading-none tracking-tight text-gray-900 md:text-4xl lg:text-5xl dark:text-white">
