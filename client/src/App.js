@@ -8,7 +8,6 @@ import EducationStructure from "./components/EducationStructure";
 import HSD from "./components/HSD";
 import Tools from "./components/Tools";
 import ToolsDetail from "./components/ToolsDetail";
-import AboutUs from "./components/AboutUs";
 import Reporting from './components/Reporting';
 
 import Footer from './components/Footer';
@@ -152,7 +151,6 @@ function App() {
                 <Route exact path = '/hsd' element = {<HSD /> } />
                 <Route exact path = '/tools' element = {<Tools /> } />
                 <Route exact path = '/toolsDetail/:toolName' element = {<ToolsDetail /> } />
-                <Route exact path = '/aboutUs' element = {<AboutUs /> } />
                 <Route exact path = '/reporting' element = {<Reporting /> } />
 
                 <Route exact path = '/signin' element = {<Signin /> } />

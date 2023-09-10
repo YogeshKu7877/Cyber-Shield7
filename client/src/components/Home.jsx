@@ -3,7 +3,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { Disclosure } from "@headlessui/react";
 import { ChevronUpIcon } from "@heroicons/react/20/solid";
-
+import AnchorLink from "react-anchor-link-smooth-scroll";
 
 function Home() {
   return (
@@ -16,14 +16,15 @@ function Home() {
             </span>
           </h1>
           <p className="mb-8 text-lg font-normal text-gray-300 lg:text-xl sm:px-16 lg:px-48">
-            We're dedicated to educating users and eliminating hate speech,
-            making the online world safer, more inclusive, and respectful.
+            To Empower and Protect: Our mission is to empower individuals and
+            businesses with the knowledge and tools they need to navigate the
+            digital landscape securely. We believe that everyone deserves to
+            explore the internet without fear, and every organization should be
+            able to operate with confidence.
           </p>
           <div className="flex flex-col space-y-4 sm:flex-row sm:justify-center sm:space-y-0 sm:space-x-4">
-
             <Link
               to="/hsd"
-
               className="inline-flex justify-center items-center py-3 px-5 text-base font-medium text-center text-white rounded-lg bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 dark:focus:ring-blue-900"
             >
               Quick scan
@@ -43,17 +44,16 @@ function Home() {
                 />
               </svg>
             </Link>
-            <Link
-              to="/"
+            <AnchorLink
+              href="#aboutUs"
               className="inline-flex justify-center hover:text-gray-900 items-center py-3 px-5 text-base font-medium text-center text-white rounded-lg border border-white hover:bg-gray-100 focus:ring-4 focus:ring-gray-400"
             >
               Learn more
-            </Link>
-
+            </AnchorLink>
           </div>
         </div>
 
-        <div className="flex w-full h-full">
+        <div className="flex w-full h-full" id="aboutUs">
           <div className="w-full flex items-center justify-center">
             <div className="w-full p-4 text-center bg-white border border-gray-200 rounded-lg shadow sm:p-8 dark:bg-gray-800 dark:border-gray-700">
               <h4 className="mb-2 text-3xl font-bold text-gray-900 dark:text-white">
@@ -66,12 +66,10 @@ function Home() {
                   <div className="lg:pr-4">
                     <div className="lg:max-w-lg">
                       <p className="mt-6 text-xl leading-8 text-gray-700">
-                        Technology has made communication more accessible and
-                        widespread, reaching a global audience. Hate speech
-                        online can harm individuals and communities on a massive
-                        scale. The rise of online hate speech has led to
-                        cyberbullying and harassment, causing emotional and
-                        psychological harm to victims.
+                        At CyberShield, we stand at the forefront of the battle
+                        against cyber threats, committed to safeguarding the
+                        digital realm. In an era characterized by connectivity,
+                        securing your online presence is paramount.
                       </p>
                     </div>
                   </div>
@@ -80,16 +78,23 @@ function Home() {
                   <div className="relative flex items-center bg-gray-100 mt-9">
                     <div className="p-8 sm:p-16 lg:p-24">
                       <h3 className="text-4xl font-bold sm:text-2xl">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing
-                        elit. Tempore, debitis.
+                        Rest assured, with CyberShield, your data is in capable
+                        hands. We continuously invest in cutting-edge
+                        technology, training, and personnel to ensure that our
+                        data security measures remain at the forefront of
+                        industry standards. Your trust is our most valuable
+                        asset, and we are unwavering in our commitment to
+                        protect it.
                       </h3>
 
                       <p className="mt-4 text-gray-600">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing
-                        elit. Aliquid, molestiae! Quidem est esse numquam odio
-                        deleniti, beatae, magni dolores provident quaerat totam
-                        eos, aperiam architecto eius quis quibusdam fugiat
-                        dicta.
+                        Comprehensive Expertise: Our team of cybersecurity
+                        experts combines years of experience with cutting-edge
+                        technology to provide a comprehensive suite of
+                        protection services. Innovation-Driven Solutions: We are
+                        committed to staying ahead of the curve, constantly
+                        innovating to anticipate and counteract emerging
+                        threats.
                       </p>
                     </div>
                   </div>
@@ -106,7 +111,6 @@ function Home() {
                         opinion and inciting real-world actions.
                       </p>
                       <ul className="mt-8 space-y-8 text-gray-600">
-
                         <li className="flex gap-x-3">
                           <span>
                             <strong className="font-semibold text-gray-900">
@@ -130,59 +134,89 @@ function Home() {
                         <li className="flex gap-x-3">
                           <span>
                             <strong className="font-semibold text-gray-900">
-                              Social Responsibility.
+                              Social Responsibility:
                             </strong>
-                            Tech companies and online platforms increasingly
-                            recognize their responsibility to combat hate speech
-                            and promote respectful communication.
+                            At CyberShield, we are deeply committed to our
+                            social responsibilities. We recognize that in
+                            today's interconnected world, digital safety is an
+                            integral part of overall well-being. Our commitment
+                            extends beyond mere protection; we actively engage
+                            in initiatives that promote human rights, global
+                            awareness, and a safer digital space.
                           </span>
                         </li>
                         <li className="flex gap-x-3">
                           <span>
                             <strong className="font-semibold text-gray-900">
-                              Human Rights.
+                              Human Rights Advocacy:
                             </strong>
-                            Hate speech infringes upon the human rights and
-                            dignity of individuals and groups, undermining
-                            principles of equality and non-discrimination.
+                            In the digital age, protecting human rights
+                            transcends physical boundaries. CyberShield
+                            advocates for the preservation of human rights in
+                            the digital sphere. We believe that every individual
+                            should be able to enjoy their online presence free
+                            from discrimination, harassment, or any form of
+                            harm. Through our initiatives, we work tirelessly to
+                            ensure that digital spaces are inclusive,
+                            respectful, and uphold the dignity and rights of all
+                            individuals.
                           </span>
                         </li>
                         <li className="flex gap-x-3">
                           <span>
                             <strong className="font-semibold text-gray-900">
-                              Global Awareness.
+                              Global Awareness Campaigns:
                             </strong>
-                            Hate speech detection and prevention efforts are
-                            gaining global attention as society seeks solutions
-                            to address this growing issue.
+                            Education and awareness are at the heart of our
+                            mission. We believe that knowledge is the most
+                            powerful tool in the fight against cyber threats.
+                            Our global awareness campaigns aim to inform and
+                            equip individuals and organizations with the
+                            knowledge they need to navigate the digital world
+                            safely. Through webinars, workshops, and educational
+                            resources, we empower our community to recognize and
+                            mitigate risks, ensuring a secure online experience
+                            for all.
                           </span>
                         </li>
                         <li className="flex gap-x-3">
                           <span>
                             <strong className="font-semibold text-gray-900">
-                              Report Hate Speech.
+                              Report Hate Speech:
                             </strong>
-                            If you encounter hate speech online or offline,
-                            consider reporting it to the relevant authorities or
-                            platform moderators.
+                            At CyberShield, we take a strong stand against hate
+                            speech. Our Hate Speech Reporting initiative
+                            provides a platform for users to report instances of
+                            hate speech they encounter online. By actively
+                            addressing and combatting hate speech, we aim to
+                            foster a more respectful and tolerant online
+                            community. Through this initiative, we encourage
+                            users to stand up against hate and contribute to a
+                            safer digital environment for everyone.
                           </span>
                         </li>
                       </ul>
                       <p className="mt-8">
-                        In today's technological era, the need to avoid hate
-                        speech is not only a matter of personal responsibility
-                        but also a societal imperative. It contributes to
-                        building a more harmonious and tolerant digital world
-                        where individuals can interact with respect and dignity,
-                        free from discrimination and harm.
+                        In Digital literacy is a fundamental right in today's
+                        interconnected world. At CyberShield, we are dedicated
+                        to educating individuals and organizations about cyber
+                        threats and best practices for online safety. We offer a
+                        range of resources, including informative articles,
+                        webinars, workshops, and seminars. Through these
+                        educational initiatives, we empower our community to
+                        make informed decisions and take proactive steps towards
+                        enhancing their digital security.
                       </p>
 
                       <p className="mt-6">
-                        Avoiding hate speech is an essential step toward
-                        creating a more inclusive, respectful, and harmonious
-                        society, whether in offline or online interactions. It
-                        contributes to a safer and more welcoming environment
-                        for all individuals and communities.
+                        Protecting your privacy is our top priority. Our team
+                        conducts thorough assessments to identify and mitigate
+                        privacy risks and threats. We take a comprehensive
+                        approach, evaluating potential vulnerabilities in your
+                        digital presence and recommending tailored solutions. By
+                        addressing privacy risks, we ensure that your sensitive
+                        information remains secure, giving you the confidence to
+                        navigate the digital landscape without compromise.
                       </p>
                     </div>
                   </div>
@@ -207,51 +241,56 @@ function Home() {
             <Link
               className="block rounded-xl border border-gray-500 p-8 shadow-xl transition hover:border-gray-100 hover:shadow-purple-500/10"
               to="/cyberSecurity"
-
             >
               <h2 className="mt-4 text-xl font-bold text-black">
                 Digital campaigns
               </h2>
 
               <p className="mt-1 text-sm text-gray-700">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex ut
-                quo possimus adipisci distinctio alias voluptatum blanditiis
-                laudantium.
-              </p>
-
-            </Link>
-            <Link
-              className="block rounded-xl border border-gray-500 p-8 shadow-xl transition hover:border-gray-100 hover:shadow-purple-500/10"
-              to="/cyberSecurity"
-
-            >
-              <h2 className="mt-4 text-xl font-bold text-black">
-                Digital campaigns
-              </h2>
-
-              <p className="mt-1 text-sm text-gray-700">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex ut
-                quo possimus adipisci distinctio alias voluptatum blanditiis
-                laudantium.
+                These initiatives reflect our unwavering commitment to not only
+                provide cutting-edge cybersecurity solutions but also to
+                actively contribute to a safer, more inclusive digital
+                environment for all. Through these efforts, we aim to empower
+                individuals and organizations to thrive in the digital age while
+                upholding fundamental values of human rights, inclusivity, and
+                privacy.
               </p>
             </Link>
             <Link
               className="block rounded-xl border border-gray-500 p-8 shadow-xl transition hover:border-gray-100 hover:shadow-purple-500/10"
               to="/cyberSecurity"
-
             >
               <h2 className="mt-4 text-xl font-bold text-black">
                 Digital campaigns
               </h2>
 
               <p className="mt-1 text-sm text-gray-700">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex ut
-                quo possimus adipisci distinctio alias voluptatum blanditiis
-                laudantium.
+                In today's rapidly evolving digital landscape, information is
+                power. At CyberShield, we understand the importance of proactive
+                outreach and education. Our digital campaigns are meticulously
+                crafted to raise awareness about cybersecurity, equip
+                individuals and businesses with essential knowledge, and promote
+                safe online practices.
+              </p>
+            </Link>
+            <Link
+              className="block rounded-xl border border-gray-500 p-8 shadow-xl transition hover:border-gray-100 hover:shadow-purple-500/10"
+              to="/cyberSecurity"
+            >
+              <h2 className="mt-4 text-xl font-bold text-black">
+                Empowering Through Information:
+              </h2>
+
+              <p className="mt-1 text-sm text-gray-700">
+                Our digital campaigns are designed to empower users with
+                practical, actionable information. We cover a wide range of
+                topics, from recognizing phishing attempts to securing personal
+                data. Through engaging content, we strive to demystify
+                cybersecurity, making it accessible to individuals of all
+                backgrounds and levels of expertise.
               </p>
             </Link>
           </div>
-
         </div>
         <section className="bg-gray-200 text-black">
           <div className="mx-auto max-w-screen-xl px-4 py-8 sm:py-12 sm:px-6 lg:py-10 lg:px-8">
@@ -259,53 +298,59 @@ function Home() {
               <p className="mt-4 text-gray-900">Digital Privacy content.</p>
             </div>
             <div className="mt-8 grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
-
               <Link
                 className="block rounded-xl border border-gray-500 p-8 shadow-xl transition hover:border-gray-100 hover:shadow-purple-500/10"
                 to="/digitalPrivacy"
-
               >
                 <h2 className="mt-4 text-xl font-bold text-black">
-                  Digital campaigns
+                  Tailored Content for Diverse Audiences:
                 </h2>
 
                 <p className="mt-1 text-sm text-gray-700">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex ut
-                  quo possimus adipisci distinctio alias voluptatum blanditiis
-                  laudantium.
+                  We recognize that cybersecurity needs vary across different
+                  sectors and user groups. Our campaigns are carefully tailored
+                  to address the specific concerns and challenges faced by
+                  individuals, small businesses, enterprises, and educational
+                  institutions. Whether you're a tech-savvy professional or new
+                  to the digital world, our content is designed to meet you
+                  where you are.
                 </p>
               </Link>
 
               <Link
                 className="block rounded-xl border border-gray-500 p-8 shadow-xl transition hover:border-gray-100 hover:shadow-purple-500/10"
                 to="/digitalPrivacy"
-
               >
                 <h2 className="mt-4 text-xl font-bold text-black">
-                  Digital campaigns
+                  Interactive Learning Experience:
                 </h2>
 
                 <p className="mt-1 text-sm text-gray-700">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex ut
-                  quo possimus adipisci distinctio alias voluptatum blanditiis
-                  laudantium.
+                  Our campaigns go beyond static content. We leverage multimedia
+                  elements, including videos, infographics, and interactive
+                  quizzes, to create an engaging learning experience. By
+                  incorporating real-life scenarios and practical tips, we
+                  enable users to apply their newfound knowledge in their online
+                  activities
                 </p>
-
               </Link>
-              
+
               <Link
                 className="block rounded-xl border border-gray-500 p-8 shadow-xl transition hover:border-gray-100 hover:shadow-purple-500/10"
                 to="/digitalPrivacy"
-
               >
                 <h2 className="mt-4 text-xl font-bold text-black">
-                  Digital campaigns
+                  Ongoing Support and Resources:
                 </h2>
 
                 <p className="mt-1 text-sm text-gray-700">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex ut
-                  quo possimus adipisci distinctio alias voluptatum blanditiis
-                  laudantium.
+                  Our digital campaigns serve as a starting point for a
+                  continuous journey towards enhanced cybersecurity. We provide
+                  a wealth of supplementary resources, including in-depth
+                  guides, best practices, and access to our expert support team.
+                  We believe that education is an ongoing process, and our
+                  campaigns are just the first step in building a safer digital
+                  future.
                 </p>
               </Link>
             </div>
@@ -330,13 +375,34 @@ function Home() {
                 to="/privacyRisk"
               >
                 <h2 className="mt-4 text-xl font-bold text-black">
-                  Digital campaigns
+                  Community Building and Collaboration:
                 </h2>
 
                 <p className="mt-1 text-sm text-gray-700">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex ut
-                  quo possimus adipisci distinctio alias voluptatum blanditiis
-                  laudantium.
+                  Through our campaigns, we aim to foster a sense of community
+                  among our users. We encourage discussions, knowledge-sharing,
+                  and collaboration among individuals and organizations
+                  committed to digital safety. By creating a supportive network,
+                  we empower our community to be proactive advocates for
+                  cybersecurity in their respective spheres.
+                </p>
+              </Link>
+
+              <Link
+                className="block rounded-xl border border-gray-500 p-8 shadow-xl transition hover:border-gray-100 hover:shadow-purple-500/10"
+                to="/privacyRisk"
+              >
+                <h2 className="mt-4 text-xl font-bold text-black">
+                  Measuring Impact and Effectiveness:
+                </h2>
+
+                <p className="mt-1 text-sm text-gray-700">
+                  We believe in accountability. Our campaigns are carefully
+                  monitored and evaluated to measure their impact on user
+                  behavior and awareness levels. This data-driven approach
+                  allows us to refine our content and strategies, ensuring that
+                  we deliver the most relevant and impactful information to our
+                  audience.
                 </p>
               </Link>
 
@@ -349,28 +415,14 @@ function Home() {
                 </h2>
 
                 <p className="mt-1 text-sm text-gray-700">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex ut
-                  quo possimus adipisci distinctio alias voluptatum blanditiis
-                  laudantium.
-                </p>
-              </Link>
-
-              <Link
-                className="block rounded-xl border border-gray-500 p-8 shadow-xl transition hover:border-gray-100 hover:shadow-purple-500/10"
-                to="/privacyRisk"
-              >
-                <h2 className="mt-4 text-xl font-bold text-black">
-                  Digital campaigns
-                </h2>
-
-                <p className="mt-1 text-sm text-gray-700">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex ut
-                  quo possimus adipisci distinctio alias voluptatum blanditiis
-                  laudantium.
+                  By engaging with our digital campaigns, you're not only
+                  enhancing your own cybersecurity but also contributing to a
+                  collective effort to create a safer online environment for
+                  everyone. Together, we can fortify the digital world against
+                  evolving threats and build a resilient, secure digital future.
                 </p>
               </Link>
             </div>
-
           </div>
 
           <div className="mx-auto max-w-screen-xl px-4 py-8 sm:py-12 sm:px-6 lg:py-10 lg:px-8">
@@ -383,13 +435,16 @@ function Home() {
                 to="/dataSecurity"
               >
                 <h2 className="mt-4 text-xl font-bold text-black">
-                  Digital campaigns
+                  Data Security Commitment:
                 </h2>
 
                 <p className="mt-1 text-sm text-gray-700">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex ut
-                  quo possimus adipisci distinctio alias voluptatum blanditiis
-                  laudantium.
+                  At CyberShield, safeguarding your data is our utmost priority.
+                  We understand that in today's data-driven world, protecting
+                  sensitive information is non-negotiable. Our comprehensive
+                  data security measures are designed to ensure that your
+                  valuable information remains confidential, intact, and
+                  accessible only to authorized users.
                 </p>
               </Link>
 
@@ -398,13 +453,15 @@ function Home() {
                 to="/dataSecurity"
               >
                 <h2 className="mt-4 text-xl font-bold text-black">
-                  Digital campaigns
+                  Encryption Protocols:
                 </h2>
 
                 <p className="mt-1 text-sm text-gray-700">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex ut
-                  quo possimus adipisci distinctio alias voluptatum blanditiis
-                  laudantium.
+                  We employ industry-standard encryption protocols to shield
+                  your data from unauthorized access during transmission and
+                  storage. This means that even if intercepted, the data remains
+                  indecipherable to any unauthorized party, providing an
+                  additional layer of protection
                 </p>
               </Link>
 
@@ -413,17 +470,18 @@ function Home() {
                 to="/dataSecurity"
               >
                 <h2 className="mt-4 text-xl font-bold text-black">
-                  Digital campaigns
+                  Access Controls and Authentication:
                 </h2>
 
                 <p className="mt-1 text-sm text-gray-700">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex ut
-                  quo possimus adipisci distinctio alias voluptatum blanditiis
-                  laudantium.
+                  Our robust access controls and authentication processes ensure
+                  that only authorized individuals have access to your data.
+                  Multi-factor authentication, strong password policies, and
+                  role-based permissions are just some of the measures we
+                  implement to fortify your data's integrity.
                 </p>
               </Link>
             </div>
-
           </div>
         </section>
       </section>
@@ -432,55 +490,56 @@ function Home() {
           <div className="relative px-4 mx-auto w-full text-center py-24 lg:py-40 bg-write">
             <div className="bg-white w-50 mt-[-50px] p-4 text-centerblock rounded-xl border border-gray-400 border-s-8 shadow-xl transition hover:border-gray-100 hover:shadow-purple-500/10">
               <h5 className="mb-7 text-3xl font-bold text-gray-900 dark:text-white">
-                Report
+                Regular Security Audits and Vulnerability Assessments:
               </h5>
               <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">
-                Online hate speech can have profound and far-reaching
-                consequences, affecting individuals, communities, and the
-                broader digital landscape. Reporting hate speech is not just a
-                responsible action; it is a vital step in fostering a safer and
-                more respectful online environment. Here's why it matters
+                To stay ahead of evolving threats, we conduct regular security
+                audits and vulnerability assessments. This proactive approach
+                allows us to identify and address potential weaknesses in our
+                systems, ensuring that your data remains impervious to
+                exploitation.
               </p>
               <p className="mb-3 mt-5 font-normal text-gray-700 dark:text-gray-400">
-                Hate speech can cause significant harm, both emotionally and
-                psychologically, to those targeted. Reporting hate speech helps
-                shield individuals from the adverse effects of discrimination,
-                harassment, and threats. environment. Here's why it matters
+                Despite our stringent preventive measures, we acknowledge that
+                unforeseen events may occur. In such cases, our incident
+                response team is equipped to swiftly address any security
+                incidents. Additionally, we have robust data recovery protocols
+                in place to restore any lost or compromised information to its
+                original state.
               </p>
               <p className="mb-3 mt-5 font-normal text-gray-700 dark:text-gray-400">
-                Hate speech has the potential to poison online communities and
-                turn them into hostile environments. By reporting it, you
-                contribute to maintaining an inclusive, respectful, and
-                harmonious online space where diverse voices can thrive.
+                We adhere to all relevant data protection and privacy
+                regulations, ensuring that your data is handled in compliance
+                with legal requirements. This includes adherence to GDPR, HIPAA,
+                CCPA, and any other applicable regional or industry-specific
+                standards.
               </p>
               <p className="mb-3 mt-5 font-normal text-gray-700 dark:text-gray-400">
-                Hate speech has the potential to poison online communities and
-                turn them into hostile environments. By reporting it, you
-                contribute to maintaining an inclusive, respectful, and
-                harmonious online space where diverse voices can thrive.
+                Our vigilant monitoring systems and utilization of threat
+                intelligence allow us to stay ahead of emerging threats. By
+                leveraging advanced technologies and keeping a finger on the
+                pulse of the cybersecurity landscape, we can swiftly respond to
+                any potential risks.
               </p>
               <p className="mb-3 mt-5 font-normal text-gray-700 dark:text-gray-400">
-                Your reports provide valuable feedback to online platforms and
-                websites. They help these platforms enforce their community
-                guidelines and take necessary actions against those who violate
-                them, making the digital world safer for all users.
+                We believe that educating our users is fundamental to data
+                security. We provide resources and training to empower you with
+                the knowledge and best practices needed to maintain a secure
+                digital environment.
               </p>
               <p className="mb-3 mt-10 font-normal text-gray-700 dark:text-gray-400">
-                By reporting hate speech, you become an active participant in
-                the fight against online discrimination and hostility. Your
-                actions contribute to a more welcoming and respectful digital
-                society, where everyone can engage without fear or prejudice.
-                Thank you for taking a stand and joining us in promoting digital
-                respect and safety.
+                In the event of any security incident or breach, we commit to
+                transparent communication. Our priority is to keep you informed,
+                providing you with the necessary guidance and resources to
+                navigate the situation with confidence.
               </p>
-              <Link 
-                to = "/reporting"
+              <Link
+                to="/reporting"
                 type="button"
                 className="text-red-700 mt-7 hover:text-white border border-red-700 hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-red-300 font-medium rounded-lg text-sm px-9 py-2.5 text-center mr-2 mb-2 dark:border-red-500 dark:text-red-500 dark:hover:text-white dark:hover:bg-red-600 dark:focus:ring-red-700"
               >
                 Send report!
               </Link>
-
             </div>
           </div>
         </div>
@@ -640,7 +699,6 @@ function Home() {
           </Disclosure>
         </div>
       </div>
-
     </>
   );
 }
