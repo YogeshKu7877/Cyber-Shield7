@@ -24,7 +24,7 @@ app.use("/review" , reviewRouter);
 app.use("/report" , reportRouter);
 
 //  Connecting MongoDB please enter your mongodb URL here and create collections of name : users , reviews , dictionaries , reports 
-mongoose.connect("mongodb+srv://Nikhil-sadhwani:multiWayCoder42@cluster0.61grdks.mongodb.net/hackathon?retryWrites=true&w=majority");
+mongoose.connect("Enter_Your_MongoDB_URL");
 
 app.listen(3001 , ()=>{
     console.log("Server is running");
